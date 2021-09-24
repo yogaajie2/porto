@@ -1,0 +1,103 @@
+<template>
+  <div>
+    <div
+      class="fixed flex h-screen top-0 w-screen z-20"
+      v-show="isStillRevealing"
+    >
+      <transition
+        name="reveal-left"
+        @after-enter="$nuxt.$emit('emitToggleMenu')"
+        @leave="$nuxt.$emit('emitShowContents')"
+        @after-leave="isStillRevealing = false"
+      >
+        <div
+          class="curtain-left bg-primary-lightest w-full"
+          v-show="isRevealed"
+        ></div>
+      </transition>
+
+      <transition name="reveal-right">
+        <div
+          class="curtain-right bg-primary-lightest w-full"
+          v-show="isRevealed"
+        ></div>
+      </transition>
+    </div>
+
+    <div
+      class="fixed flex h-screen items-center justify-center top-0 w-screen z-20"
+      v-show="isFirstLoad"
+    >
+      <span class="fade-in-out text-5xl text-tertiary">//</span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      isFirstLoad: true,
+      isRevealed: true,
+      isStillRevealing: true
+    }
+  },
+
+  mounted() {
+    this.$nuxt.$on('showTransition', this.cover);
+    this.reveal();
+  },
+
+  methods: {
+    reveal() {
+      if (this.isFirstLoad) {
+        setTimeout(() => {
+          this.isRevealed = false;
+          this.scrollToTop();
+          this.isFirstLoad = false;
+        }, 3000);
+      } else {
+        setTimeout(() => {
+          this.isRevealed = false;
+          this.scrollToTop();
+        }, 500);
+      }
+    },
+
+    cover() {
+      this.isStillRevealing = true;
+      this.isRevealed = true;
+      this.reveal();
+    },
+
+    scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  }
+}
+</script>
+
+<style scoped>
+.curtain-left,
+.curtain-right {
+  transform: scaleX(2.5) skewX(-8deg);
+}
+
+.reveal-right-enter-active,
+.reveal-left-enter-active,
+.reveal-right-leave-active,
+.reveal-left-leave-active {
+  transition: transform 400ms ease-out;
+}
+
+.reveal-left-enter,
+.reveal-left-leave-to {
+  transform: translateX(-250%) scaleX(2.5) skewX(-8deg);
+}
+
+.reveal-right-enter,
+.reveal-right-leave-to {
+  transform: translateX(250%) scaleX(2.5) skewX(-8deg);
+}
+</style>

@@ -1,0 +1,34 @@
+/* Fade-in-out */
+@keyframes fade-in-out {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.fade-in-out {
+  animation: fade-in-out 600ms infinite alternate;
+}
+
+/* Reveal */
+.reveal-left {
+  transform: translate(-100%) scaleX(2.5) skewX(-8deg);
+}
+
+.reveal-right {
+  transform: translate(100%);
+}
+
+/* Hide header */
+.hide-header {
+  transition: transform 300ms ease-in-out;
+  transform: translateY(-100%);
+}
+
+/* Back and forth */
+@keyframes back-and-forth {
+  from {transform: translate(0);}
+  to {transform: translate(.5rem);}
+}
+
+.back-and-forth {
+  animation: back-and-forth 800ms ease-in-out infinite alternate;
+}
