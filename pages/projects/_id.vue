@@ -131,7 +131,7 @@ export default {
   computed: {
     project() {
       return this.projects.find(project => project.id === this.$route.params.id);
-    },
+    }
   },
 
   mounted() {
@@ -139,7 +139,7 @@ export default {
   },
 
   methods: {
-    showContents() { this.isContentShown = true; }
+    showContents() { this.isContentShown = true; },
   }
 }
 

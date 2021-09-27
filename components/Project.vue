@@ -5,7 +5,7 @@
       class="mb-12"
     />
     
-    <h4>{{ project.role }}</h4>
+    <h4>{{ project.overview.role }}</h4>
 
     <NuxtLink
       :to="`projects/${ project.id }`"
@@ -14,7 +14,7 @@
       <h2 class="text-tertiary lg:mb-4">{{ project.title }}</h2>
     </NuxtLink>
 
-    <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.description }}</p>
+    <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.overview.goal }}</p>
   </div>
 </template>
 

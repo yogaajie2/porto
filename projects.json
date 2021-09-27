@@ -2,19 +2,15 @@
   "projects": [
     { 
       "id": "flygoal",
-      "role": "UI & UX/Web Development",
       "title": "Flygoal",
-      "description": "The best way to live an authentic taste of France is to rely on travel experts with an insiders approach.",
+      "subtitle": "real-time sports live score site",
 
-      "overview": [
-        {
-          "subtitle": "Destination Management Company",
-          "goal": "Leverage agile frameworks to provide a robust synopsis for high level overviews",
-          "year": "2019",
-          "client": "Flygoal",
-          "address": "https://www.flygoal.com"
-        }
-      ],
+      "overview": {
+        "goal": "Leverage agile frameworks to provide a robust synopsis for high level overviews",
+        "year": "2019",
+        "role": "front-end Development",
+        "address": "https://www.flygoal.com"
+      },
 
       "contents": [
         {
@@ -30,23 +26,41 @@
 
     { 
       "id": "warta-bola",
-      "role": "UI & UX/Web Development",
       "title": "Warta Bola",
-      "description": "The best way to live an authentic taste of France is to rely on travel experts with an insiders approach."
+      "subtitle": "Wordpress based soccer news site",
+
+      "overview": {
+        "goal": "Override the digital divide with additional clickthroughs from DevOps",
+        "year": "2019",
+        "role": "UI/UX design, front-end development",
+        "address": "https://www.wartabola.id"
+      }
     },
 
     { 
       "id": "neoxxi",
-      "role": "UI & UX/Web Development",
       "title": "NeoXXI",
-      "description": "The best way to live an authentic taste of France is to rely on travel experts with an insiders approach."
+      "subtitle": "Watch your favorite movies and series anytime, anywhere",
+
+      "overview": {
+        "goal": "Dramatically visualize customer directed convergence without revolutionary ROI",
+        "year": "2019",
+        "role": "front-end development",
+        "address": "https://www.neoxxi.com"
+      }
     },
 
     { 
       "id": "pubgoal",
-      "role": "UI & UX/Web Development",
       "title": "Pubgoal",
-      "description": "The best way to live an authentic taste of France is to rely on travel experts with an insiders approach."
+      "subtitle": "real-time sports live score site",
+
+      "overview": {
+        "goal": "Efficiently unleash cross-media information without cross-media value",
+        "year": "2019",
+        "role": "UI/UX design, front-end development",
+        "address": "https://www.pubgoal.com"
+      }
     }
   ]
 }
