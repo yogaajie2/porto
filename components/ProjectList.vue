@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import data from "../projects.json";
+import data from "~/projects.json";
 
 export default {
   data() {
