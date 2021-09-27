@@ -23,27 +23,19 @@
     </ZoomIn>
 
     <section class="space-y-8 px-8 py-16">
-      <div>
-        <h6 class="mb-4">Goal</h6>
-        <p>I was assigned the task of designing the destination management company website for luxury travel planning in France</p>
-      </div>
+      <div
+        v-for="(value, index) in project.overview"
+        :key="index"
+      >
+        <h6 class="mb-4">{{ index }}</h6>
+        <p v-if="index != 'address'">{{ value }}</p>
 
-      <div>
-        <h6 class="mb-4">Year</h6>
-        <p>2021</p>
-      </div>
-
-      <div>
-        <h6 class="mb-4">Client</h6>
-        <p>Top Travel Italy</p>
-      </div>
-
-      <div class="border-b pb-8">
-        <h6 class="mb-4">Live Project</h6>
         <a
-          href="javascript:void(0)"
+          v-else
+          :href="value"
+          target="blank"
           class="underline"
-        >toptravelfrance.com</a>
+        >{{ value }}</a>
       </div>
     </section>
 
