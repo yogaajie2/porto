@@ -39,59 +39,30 @@
       </div>
     </section>
 
-    <img src="https://via.placeholder.com/375x400" />
-    
-    <section class="px-8 pb-16 pt-24 bg-secondary text-primary">
-      <h2 class="mb-8">A warm and elegant design based on emotions</h2>
-      <p>The top travel france design has its roots in a minimal and elegant design capable of expressing the concept of luxury and elegance in accordance with the company's mission</p>
-      
-      <img
-        src="https://via.placeholder.com/439x210"
-        class="my-16"
-      />
+    <section
+      v-for="(content, index) in project.contents"
+      :key="index"
+      class="pb-16 space-y-8 bg-secondary text-primary"
+    >
+      <img :src="content.image" />
 
-      <h2 class="mb-8">A tiny detailed rebrand</h2>
-      <p>I slightly redefined some aspects of the logo using a graceful font to symbolize elegance. I also rearranged the logo on two lines to take advantage of the space in height and insert the different destinations</p>
-    </section>
+      <div class="px-8 space-y-16">
+        <div class="space-y-4">
+          <h2>{{ content.heading }}</h2>
+          <p>{{ content.paragraph }}</p>
+        </div>
 
-    <img src="https://via.placeholder.com/487x400" />
-
-    <section class="px-8 pb-16 pt-24 bg-secondary text-primary">
-      <div class="mb-16 space-y-8">
-        <img src="https://via.placeholder.com/439x440" />
-        <img src="https://via.placeholder.com/439x440" />
-        <img src="https://via.placeholder.com/439x440" />
-        <img src="https://via.placeholder.com/439x440" />
-        <img src="https://via.placeholder.com/439x440" />
-      </div>
-
-      <h2 class="mb-8">User Interface</h2>
-      <p>The graphic interface is the synthesis of the concepts expressed first of luxury and elegance by combining warm but at the same time elegant colors, A classic but impactful typography</p>
-    </section>
-
-    <img src="https://via.placeholder.com/487x400" />
-
-    <section class="px-8 pb-16 pt-24 bg-secondary text-primary">
-      <div class="mb-16 space-y-8">
-        <img src="https://via.placeholder.com/439x440" />
-        <img src="https://via.placeholder.com/439x440" />
-        <img src="https://via.placeholder.com/439x440" />
+        <div class="space-y-8">
+          <img
+            v-for="(screenshot, index) in content.screenshots"
+            :key="index"
+            :src="screenshot"
+          />
+        </div>
       </div>
     </section>
 
-    <img src="https://via.placeholder.com/487x400" />
-
-    <section class="px-8 pb-16 pt-24 bg-secondary text-primary">
-      <h2 class="mb-8">The site empowers users to discover a new way to travel</h2>
-      <p class="mb-16">top travel's goal is to create the best possible experience offering a quality service combined with the insider's approach of a local Team</p>
-
-      <div class="space-y-8">
-        <img src="https://via.placeholder.com/439x440" />
-        <img src="https://via.placeholder.com/439x440" />
-      </div>
-    </section>
-
-    <img src="https://via.placeholder.com/487x400" />
+    <img :src="project.footerImage" />
 
     <section class="px-8 py-24">
       <h3>Next Project:</h3>
