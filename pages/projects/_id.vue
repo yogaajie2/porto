@@ -68,10 +68,10 @@
       <h3>Next Project:</h3>
 
       <NuxtLink
-        to="/projects/flygoal"
+        :to="nextProject.id"
         class="flex items-center mb-16"
       >
-        <h2 class="text-tertiary mr-4">Flygoal</h2>
+        <h2 class="text-tertiary mr-4">{{ nextProject.title }}</h2>
         
         <font-awesome-icon
           :icon="['fas', 'angle-double-right']"
@@ -102,6 +102,10 @@ export default {
   computed: {
     project() {
       return this.projects.find(project => project.id === this.$route.params.id);
+    },
+
+    nextProject() {
+      return this.projects[this.findIndex()];
     }
   },
 
@@ -110,7 +114,17 @@ export default {
   },
 
   methods: {
-    showContents() { this.isContentShown = true; }
+    showContents() { this.isContentShown = true; },
+
+    findIndex() {
+      let currentIndex = this.projects.indexOf(this.project);
+      
+      if (currentIndex != this.projects.length - 1) {
+        return currentIndex + 1;
+      } else {
+        return 0;
+      }
+    }
   }
 }
 </script>
