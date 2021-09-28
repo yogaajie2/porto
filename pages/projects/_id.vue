@@ -139,8 +139,7 @@ export default {
   },
 
   methods: {
-    showContents() { this.isContentShown = true; },
+    showContents() { this.isContentShown = true; }
   }
 }
-
 </script>
