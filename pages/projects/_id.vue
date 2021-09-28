@@ -70,6 +70,7 @@
       <NuxtLink
         :to="nextProject.id"
         class="flex items-center mb-16"
+        @click.native="$nuxt.$emit('showTransition')"
       >
         <h2 class="text-tertiary mr-4">{{ nextProject.title }}</h2>
         
@@ -79,7 +80,10 @@
         />
       </NuxtLink>
 
-      <NuxtLink to="/projects">
+      <NuxtLink
+        to="/projects"
+        @click.native="$nuxt.$emit('showTransition')"
+      >
         <p class="font-heading font-bold text-xl underline">Back to all projects</p>
       </NuxtLink>
     </section>
