@@ -35,7 +35,17 @@ export default {
   },
 
   computed: {
-    projectsLimited() { return this.projects.slice(0, 3); }
+    projectsLimited() { return this.checkRoutePath(); }
+  },
+
+  methods: {
+    checkRoutePath() {
+      if (this.$route.path == '/projects') {
+        return this.projects;
+      } else {
+        return this.projects.slice(0, 3);
+      }
+    }
   }
 }
 </script>
