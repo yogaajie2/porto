@@ -12,12 +12,13 @@
     </div>
 
     <div class="mb-20 text-center">
-      <a
-        href="javascript:void(0)"
+      <NuxtLink
+        to="/projects"
         class="items-center inline-flex"
+        @click.native="$nuxt.$emit('showTransition')"
       >
         <p class="text-tertiary border-tertiary mr-4 border-b font-heading font-bold pb-1 uppercase lg:text-lg;">View all works</p>
-      </a>
+      </NuxtLink>
     </div>
   </section>
 </template>
