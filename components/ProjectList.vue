@@ -11,7 +11,10 @@
       />
     </div>
 
-    <div class="mb-20 text-center">
+    <div
+      v-if="this.$route.path != '/projects'"
+      class="mb-20 text-center"
+    >
       <NuxtLink
         to="/projects"
         class="items-center inline-flex"
