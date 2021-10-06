@@ -1,11 +1,11 @@
 <template>
-  <footer class="bg-primary-lighter px-8 pt-12 pb-12 space-y-8 text-secondary md:px-16 lg:flex lg:justify-between lg:px-24 lg:space-x-12 lg:space-y-0 xl:px-32">
-    <div>
+  <footer class="bg-primary-lighter px-8 pt-12 pb-12 space-y-8 text-secondary md:px-16 md:space-y-24 lg:flex lg:justify-between lg:px-24 lg:space-x-12 lg:space-y-0 xl:px-32">
+    <div class="md:text-center">
       <h2 class="mb-8">Have a project?</h2>
       <CTA />
     </div>
 
-    <div class="flex mb-12 space-x-16 text-lg lg:space-x-24 xl:space-x-32">
+    <div class="flex mb-12 space-x-16 text-lg md:justify-center md:space-x-24 xl:space-x-32">
       <nav class="flex flex-col space-y-4">
         <p class="font-bold mb-2">Social</p>
         <a href="javascript:void(0)">dribbble</a>
@@ -15,7 +15,7 @@
         <a href="javascript:void(0)">facebook</a>
       </nav>
 
-      <nav class="flex flex-col space-y-4">
+      <nav class="flex flex-col space-y-4 md:text-right">
         <p class="font-bold mb-2">Navigation</p>
         <a href="javascript:void(0)">about</a>
         <a href="javascript:void(0)">works</a>

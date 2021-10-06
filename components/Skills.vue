@@ -4,7 +4,7 @@
     <h2 class="mb-20 lg:text-5xl xl:text-6xl">I worked both with agencies and independently. I also win some awards & recognitions.</h2>
 
     <div class="lg:flex lg:justify-between">
-      <div class="flex justify-between mb-12 lg:w-1/3">
+      <div class="flex justify-between mb-12 md:justify-around md:mb-20 lg:w-1/3">
         <div>
           <p class="font-bold mb-2 lg:text-2xl">Design</p>
           <p>UI Design</p>
@@ -16,7 +16,7 @@
           <p>Interaction Design</p>
         </div>
 
-        <div>
+        <div class="md:text-right">
           <p class="font-bold mb-2 lg:text-2xl">Development</p>
           <p>HTML5 / CSS3</p>
           <p>Javascript</p>

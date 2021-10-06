@@ -10,7 +10,7 @@
           class="h-screen"
         />
 
-        <div class="absolute bottom-0 min-h-80 px-8 py-16 space-y-4 text-primary">
+        <div class="absolute bottom-0 min-h-80 px-8 py-16 space-y-4 text-primary md:px-16">
           <SlideUp @after-enter="isSubtitleShown = true">
             <h1 v-show="isTitleShown">{{ project.title }}</h1>
           </SlideUp>
@@ -22,10 +22,11 @@
       </section>
     </ZoomIn>
 
-    <section class="space-y-8 px-8 py-16">
+    <section class="space-y-8 px-8 py-16 md:flex md:flex-wrap md:justify-between md:space-y-0 md:pb-8 md:px-16">
       <div
         v-for="(value, index) in project.overview"
         :key="index"
+        class="md:w-5/12 md:pb-8"
       >
         <h6 class="mb-4">{{ index }}</h6>
         <p v-if="index != 'address'">{{ value }}</p>
@@ -46,7 +47,7 @@
     >
       <img :src="content.image" />
 
-      <div class="px-8 space-y-16">
+      <div class="px-8 space-y-16 md:px-16">
         <div class="space-y-4">
           <h2>{{ content.heading }}</h2>
           <p>{{ content.paragraph }}</p>
@@ -57,6 +58,7 @@
             v-for="(screenshot, index) in content.screenshots"
             :key="index"
             :src="screenshot"
+            class="mx-auto"
           />
         </div>
       </div>
@@ -64,7 +66,7 @@
 
     <img :src="project.footerImage" />
 
-    <section class="px-8 py-24">
+    <section class="px-8 py-24 md:px-16">
       <h3>Next Project:</h3>
 
       <NuxtLink
