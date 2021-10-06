@@ -47,9 +47,9 @@ export default {
   build: {
   },
 
-  router: {
-    middleware: 'delay'
-  },
+  // router: {
+  //   middleware: 'delay'
+  // },
 
   server: {     
     port: 8000, // default: 3000     
