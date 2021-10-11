@@ -1,7 +1,7 @@
 <template>
   <ZoomIn @after-enter="isSubtitleShown = true; $nuxt.$emit('startHeaderAnimation')">
     <section
-      class="min-h-screen bg-primary-light pt-20 lg:mt-24"
+      class="min-h-screen bg-primary-light pt-20 lg:mt-20"
       v-show="isContentShown"
     >
       <div class="h-screen space-y-8 px-8 py-20 md:px-16 lg:container lg:mx-auto lg:px-24 xl:px-32">

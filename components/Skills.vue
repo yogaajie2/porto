@@ -3,8 +3,8 @@
     <h3 class="mb-4">Skills & Recognitions</h3>
     <h2 class="mb-20 lg:text-5xl xl:text-6xl">I worked both with agencies and independently. I also win some awards & recognitions.</h2>
 
-    <div class="lg:flex lg:justify-between">
-      <div class="flex justify-between mb-12 md:justify-around md:mb-20 lg:w-1/3">
+    <div class="lg:flex lg:items-end lg:justify-between">
+      <div class="flex justify-between mb-12 md:justify-around md:mb-20 lg:mb-0 lg:space-x-16">
         <div>
           <p class="font-bold mb-2 lg:text-2xl">Design</p>
           <p>UI Design</p>
@@ -28,26 +28,26 @@
         </div>
       </div>
 
-      <div class="flex flex-wrap text-center lg:w-1/3">
-        <div class="w-1/2 mb-16 md:w-1/4 lg:w-1/2">
+      <div class="flex flex-wrap text-center lg:justify-between lg:w-1/3">
+        <div class="w-1/2 mb-16 md:w-1/4 lg:mb-8 lg:w-5/12">
           <span class="font-bold text-5xl">w.</span>
           <p>Awwwards</p>
           <p>x1</p>
         </div>
 
-        <div class="w-1/2 mb-16 md:w-1/4 lg:w-1/2">
+        <div class="w-1/2 mb-16 md:w-1/4 lg:mb-8 lg:w-5/12">
           <span class="font-bold text-5xl">CDA</span>
           <p>CSSDesignAwards</p>
           <p>x12</p>
         </div>
 
-        <div class="w-1/2 md:w-1/4 lg:w-1/2">
+        <div class="w-1/2 md:w-1/4 lg:w-5/12">
           <span class="font-bold text-5xl">DN</span>
           <p>Design Nominees</p>
           <p>x1</p>
         </div>
 
-        <div class="w-1/2 md:w-1/4 lg:w-1/2">
+        <div class="w-1/2 md:w-1/4 lg:w-5/12">
           <span class="font-bold text-5xl">CF</span>
           <p>CSSFox</p>
           <p>x1</p>

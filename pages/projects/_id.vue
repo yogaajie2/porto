@@ -6,11 +6,11 @@
         v-show="isContentShown"
       >
         <img
-          src="https://via.placeholder.com/375x790"
-          class="h-screen"
+          src="https://via.placeholder.com/1920x1080"
+          class="h-screen w-screen"
         />
 
-        <div class="absolute bottom-0 min-h-80 px-8 py-16 space-y-4 text-primary md:px-16">
+        <div class="absolute bottom-0 min-h-80 px-8 py-16 space-y-4 text-primary md:px-16 lg:px-24">
           <SlideUp @after-enter="isSubtitleShown = true">
             <h1 v-show="isTitleShown">{{ project.title }}</h1>
           </SlideUp>
@@ -22,7 +22,7 @@
       </section>
     </ZoomIn>
 
-    <section class="space-y-8 px-8 py-16 md:flex md:flex-wrap md:justify-between md:space-y-0 md:pb-8 md:px-16">
+    <section class="space-y-8 px-8 py-16 md:flex md:flex-wrap md:justify-between md:space-y-0 md:pb-8 md:px-16 lg:px-24">
       <div
         v-for="(value, index) in project.overview"
         :key="index"
@@ -43,17 +43,20 @@
     <section
       v-for="(content, index) in project.contents"
       :key="index"
-      class="pb-16 space-y-8 bg-secondary text-primary"
+      class="pb-16 space-y-8 bg-secondary text-primary lg:space-y-16"
     >
-      <img :src="content.image" />
+      <img
+        :src="content.image"
+        class="w-screen"
+      />
 
-      <div class="px-8 space-y-16 md:px-16">
-        <div class="space-y-4">
+      <div class="px-8 space-y-16 md:px-16 lg:px-24">
+        <div class="space-y-4 lg:flex lg:space-x-16 lg:space-y-0">
           <h2>{{ content.heading }}</h2>
-          <p>{{ content.paragraph }}</p>
+          <p class="lg:w-3/5">{{ content.paragraph }}</p>
         </div>
 
-        <div class="space-y-8">
+        <div class="space-y-8 lg:grid lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 lg:items-center lg:space-y-0">
           <img
             v-for="(screenshot, index) in content.screenshots"
             :key="index"
@@ -64,9 +67,12 @@
       </div>
     </section>
 
-    <img :src="project.footerImage" />
+    <img
+      :src="project.footerImage"
+      class="w-screen"
+    />
 
-    <section class="px-8 py-24 md:px-16">
+    <section class="px-8 py-24 md:px-16 lg:px-24">
       <h3>Next Project:</h3>
 
       <NuxtLink
