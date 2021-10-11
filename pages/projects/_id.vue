@@ -10,19 +10,21 @@
           class="h-screen w-screen"
         />
 
-        <div class="absolute bottom-0 min-h-80 px-8 py-16 space-y-4 text-primary md:px-16 lg:px-24">
-          <SlideUp @after-enter="isSubtitleShown = true">
-            <h1 v-show="isTitleShown">{{ project.title }}</h1>
-          </SlideUp>
-          
-          <FadeIn>
-            <h4 v-show="isSubtitleShown">{{ project.subtitle }}</h4>
-          </FadeIn>
+        <div class="absolute bottom-0 w-full">
+          <div class="min-h-80 container mx-auto px-8 py-16 space-y-4 text-primary md:px-16 lg:px-24 xl:px-32">
+            <SlideUp @after-enter="isSubtitleShown = true">
+              <h1 v-show="isTitleShown">{{ project.title }}</h1>
+            </SlideUp>
+            
+            <FadeIn>
+              <h4 v-show="isSubtitleShown">{{ project.subtitle }}</h4>
+            </FadeIn>
+          </div>
         </div>
       </section>
     </ZoomIn>
 
-    <section class="space-y-8 px-8 py-16 md:flex md:flex-wrap md:justify-between md:space-y-0 md:pb-8 md:px-16 lg:px-24">
+    <section class="space-y-8 container mx-auto px-8 py-16 md:flex md:flex-wrap md:justify-between md:space-y-0 md:pb-8 md:px-16 lg:px-24">
       <div
         v-for="(value, index) in project.overview"
         :key="index"
@@ -43,15 +45,15 @@
     <section
       v-for="(content, index) in project.contents"
       :key="index"
-      class="pb-16 space-y-8 bg-secondary text-primary lg:space-y-16"
+      class="space-y-8 pb-16 bg-secondary text-primary lg:space-y-16"
     >
       <img
         :src="content.image"
         class="w-screen"
       />
 
-      <div class="px-8 space-y-16 md:px-16 lg:px-24">
-        <div class="space-y-4 lg:flex lg:space-x-16 lg:space-y-0">
+      <div class="space-y-16 container mx-auto px-8 md:px-16 lg:px-24 xl:px-32">
+        <div class="items-center space-y-4 lg:flex lg:space-x-16 lg:space-y-0">
           <h2>{{ content.heading }}</h2>
           <p class="lg:w-3/5">{{ content.paragraph }}</p>
         </div>
@@ -72,7 +74,7 @@
       class="w-screen"
     />
 
-    <section class="px-8 py-24 md:px-16 lg:px-24">
+    <section class="container mx-auto px-8 py-24 md:px-16 lg:px-24 xl:px-32">
       <h3>Next Project:</h3>
 
       <NuxtLink

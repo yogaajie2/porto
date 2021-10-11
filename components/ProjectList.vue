@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary px-8 py-12 text-secondary md:px-16 lg:px-24 xl:px-32">
+  <section class="bg-primary container mx-auto px-8 py-12 text-secondary md:px-16 lg:px-24 xl:px-32">
     <h3 class="mb-4">Selected Projects</h3>
     <h2 class="mb-20">Our Projects</h2>
     

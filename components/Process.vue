@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary px-8 py-12 text-secondary md:p-16 lg:px-24 lg:py-20 xl:px-32">
+  <section class="bg-primary container mx-auto px-8 py-12 text-secondary md:p-16 lg:px-24 lg:py-20 xl:px-32">
     <h3 class="mb-4">A better design process</h3>
     <h2 class="mb-20 lg:text-5xl xl:text-6xl">I can help you better understand user needs and increase the quality of every digital product.</h2>
 

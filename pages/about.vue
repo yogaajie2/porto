@@ -5,7 +5,7 @@
       pageTitle="Constantly moving ready to experiment new things."
     />
 
-    <section class="px-8 py-12 md:px-16 lg:px-24 xl:px-32">
+    <section class="container mx-auto px-8 py-12 md:px-16 lg:px-24 xl:px-32">
       <h3>About me</h3>
       <h2 class="mb-12 lg:text-5xl xl:text-6xl">Hi! I am Goy.</h2>
       
