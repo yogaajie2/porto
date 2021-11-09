@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        <div class="flex flex-wrap text-center lg:justify-between lg:w-1/3">
+        <!-- <div class="flex flex-wrap text-center lg:justify-between lg:w-1/3">
           <div class="w-1/2 mb-16 md:w-1/4 lg:mb-8 lg:w-5/12">
             <span class="font-bold text-5xl">w.</span>
             <p>Awwwards</p>
@@ -53,7 +53,7 @@
             <p>CSSFox</p>
             <p>x1</p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
