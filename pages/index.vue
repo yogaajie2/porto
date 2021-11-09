@@ -1,8 +1,8 @@
 <template>
   <main>
     <PageHeader
-      pageSubtitle="Welcome, we are Momentum."
-      pageTitle="We design mindful user experiences & beautiful interfaces."
+      pageSubtitle="Hello, I am Goy. Welcome to My Portfolio."
+      pageTitle="I design thoughtful UIs & build them into functional apps."
     />
     
     <ProjectList />
