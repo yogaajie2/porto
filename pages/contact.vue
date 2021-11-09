@@ -45,7 +45,7 @@
       </form>
     </section>
 
-    <section class="bg-secondary">
+    <!-- <section class="bg-secondary">
       <div class="container mx-auto px-8 py-12 text-primary md:px-16 md:py-20 lg:px-24 xl:px-32">
         <h3 class="mb-4">Book a call</h3>
         <h2 class="mb-20 lg:text-5xl xl:text-6xl">Do you prefer to talk? No problem! Schedule a call</h2>
@@ -58,6 +58,6 @@
           <font-awesome-icon :icon="['fas', 'arrow-right']" />
         </a>
       </div>
-    </section>
+    </section> -->
   </main>
 </template>
