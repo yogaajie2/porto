@@ -1,6 +1,7 @@
 <template>
   <NuxtLink
     to="/contact"
+    @click.native="$nuxt.$emit('showTransition')"
     class="items-center inline-flex"
   >
     <p class="cta mr-4 text-tertiary">// Let's Work Together</p>
