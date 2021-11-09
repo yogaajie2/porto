@@ -10,20 +10,40 @@
         <div class="flex mb-12 space-x-16 text-lg md:justify-center md:space-x-24 xl:space-x-32">
           <nav class="flex flex-col space-y-4">
             <p class="font-bold mb-2">Social</p>
-            <a href="javascript:void(0)">dribbble</a>
-            <a href="javascript:void(0)">behance</a>
-            <a href="javascript:void(0)">instagram</a>
-            <a href="javascript:void(0)">linkedin</a>
-            <a href="javascript:void(0)">facebook</a>
+
+            <a
+              href="https://www.instagram.com/yogaajie2/"
+              target="_blank"
+            >instagram</a>
+
+            <a
+              href="https://www.linkedin.com/in/yogajie"
+              target="_blank"
+            >linkedin</a>
+            
+            <a
+              href="mailto:yogaajie2@gmail.com"
+              target="_blank"
+            >email</a>
           </nav>
 
           <nav class="flex flex-col space-y-4 md:text-right lg:text-left">
             <p class="font-bold mb-2">Navigation</p>
-            <a href="javascript:void(0)">about</a>
-            <a href="javascript:void(0)">works</a>
-            <a href="javascript:void(0)">contact</a>
-            <a href="javascript:void(0)">privacy policy</a>
-            <a href="javascript:void(0)">cookie policy</a>
+
+            <NuxtLink
+              to="/about"
+              @click.native="$nuxt.$emit('showTransition')"
+            >about</NuxtLink>
+
+            <NuxtLink
+              to="/projects"
+              @click.native="$nuxt.$emit('showTransition')"
+            >projects</NuxtLink>
+
+            <NuxtLink
+              to="/contact"
+              @click.native="$nuxt.$emit('showTransition')"
+            >contact</NuxtLink>
           </nav>
         </div>
       </div>
