@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'porto',
+    title: 'Yoga Prasetya Portfolio // Momentum Design',
     htmlAttrs: {
       lang: 'en'
     },

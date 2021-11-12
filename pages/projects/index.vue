@@ -8,3 +8,9 @@
     <ProjectList />
   </main>
 </template>
+
+<script>
+export default {
+  head: { titleTemplate: '%s | Projects' }
+};
+</script>

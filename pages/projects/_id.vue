@@ -139,6 +139,10 @@ export default {
         return 0;
       }
     }
-  }
+  },
+
+  head() {
+    return { titleTemplate: '%s | ' + this.project.title + ' Project' };
+  },
 }
 </script>

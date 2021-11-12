@@ -61,3 +61,9 @@
     </section> -->
   </main>
 </template>
+
+<script>
+export default {
+  head: { titleTemplate: '%s | Contact' }
+};
+</script>
