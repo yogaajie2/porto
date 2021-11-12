@@ -7,51 +7,23 @@
       <div class="lg:flex lg:items-end lg:justify-between">
         <div class="flex justify-between mb-12 md:justify-around md:mb-20 lg:mb-0 lg:space-x-16">
           <div>
-            <p class="font-bold mb-2 lg:text-2xl">Design</p>
-            <p>UI Design</p>
-            <p>UX Design</p>
-            <p>Prototyping</p>
-            <p>Visual Design</p>
-            <p>Web Design</p>
-            <p>Interaction Design</p>
+            <p class="font-bold mb-2 lg:text-2xl">Tools & Languages</p>
+            <p>HTML5 / CSS3</p>
+            <p>JavaScript ES6</p>
+            <p>PHP</p>
+            <p>Git</p>
+            <p>Wordpress</p>
           </div>
 
           <div class="md:text-right">
-            <p class="font-bold mb-2 lg:text-2xl">Development</p>
-            <p>HTML5 / CSS3</p>
-            <p>JavaScript / ES6</p>
-            <p>Vue.js / Nuxt.js</p>
-            <p>PHP / Laravel</p>
-            <p>MySQL</p>
-            <p>Wordpress</p>
+            <p class="font-bold mb-2 lg:text-2xl">Frameworks</p>
+            <p>Vue.js</p>
+            <p>Nuxt.js</p>
+            <p>Laravel</p>
+            <p>Tailwind CSS</p>
+            <p>Bootstrap</p>
           </div>
         </div>
-
-        <!-- <div class="flex flex-wrap text-center lg:justify-between lg:w-1/3">
-          <div class="w-1/2 mb-16 md:w-1/4 lg:mb-8 lg:w-5/12">
-            <span class="font-bold text-5xl">w.</span>
-            <p>Awwwards</p>
-            <p>x1</p>
-          </div>
-
-          <div class="w-1/2 mb-16 md:w-1/4 lg:mb-8 lg:w-5/12">
-            <span class="font-bold text-5xl">CDA</span>
-            <p>CSSDesignAwards</p>
-            <p>x12</p>
-          </div>
-
-          <div class="w-1/2 md:w-1/4 lg:w-5/12">
-            <span class="font-bold text-5xl">DN</span>
-            <p>Design Nominees</p>
-            <p>x1</p>
-          </div>
-
-          <div class="w-1/2 md:w-1/4 lg:w-5/12">
-            <span class="font-bold text-5xl">CF</span>
-            <p>CSSFox</p>
-            <p>x1</p>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
