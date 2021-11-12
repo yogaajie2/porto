@@ -1,8 +1,8 @@
 <template>
   <main>
     <PageHeader
-      pageSubtitle="A designer with development background."
-      pageTitle="Constantly moving ready to experiment new things."
+      pageSubtitle="Fast learning and highly adaptable."
+      pageTitle="Always curious, constantly learning."
     />
 
     <section class="container mx-auto px-8 py-12 md:px-16 lg:px-24 xl:px-32">
