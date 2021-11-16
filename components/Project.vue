@@ -21,7 +21,7 @@
           <h2 class="text-tertiary lg:mb-4">{{ project.title }}</h2>
         </NuxtLink>
     
-        <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.overview.goal }}</p>
+        <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.subtitle }}</p>
       </div>
     </SlideUp>
   </div>
