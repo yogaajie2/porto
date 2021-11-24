@@ -22,9 +22,9 @@
             >linkedin</a>
             
             <a
-              href="mailto:yogaajie2@gmail.com"
+              href="https://github.com/yogaajie2"
               target="_blank"
-            >email</a>
+            >github</a>
           </nav>
 
           <nav class="flex flex-col space-y-4 md:text-right lg:text-left">
