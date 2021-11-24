@@ -7,6 +7,10 @@
 
     <SlideUp>
       <div v-show="isProjectShown">
+        <NuxtLink
+          :to="`projects/${ project.id }`"
+          @click.native="$nuxt.$emit('showTransition')"
+        >
         <img
           src="https://via.placeholder.com/1200x540"
           class="mb-12"
@@ -14,14 +18,10 @@
         
         <h4>{{ project.overview.role }}</h4>
     
-        <NuxtLink
-          :to="`projects/${ project.id }`"
-          @click.native="$nuxt.$emit('showTransition')"
-        >
           <h2 class="text-tertiary lg:mb-4">{{ project.title }}</h2>
-        </NuxtLink>
     
         <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.subtitle }}</p>
+        </NuxtLink>
       </div>
     </SlideUp>
   </div>
