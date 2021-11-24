@@ -2,69 +2,38 @@
   "projects": [
     { 
       "id": "flygoal",
+
+      "thumbnails": {
+        "desktop": "https://i.imgur.com/9GVifbN.png",
+        "mobile": "https://i.imgur.com/bGAhEqX.png"
+      },
+
       "title": "Flygoal",
-      "subtitle": "real-time sports live score site",
+      "subtitle": "Real-time sports live score web app",
 
       "overview": {
-        "goal": "Leverage agile frameworks to provide a robust synopsis for high level overviews",
+        "goal": "Build a sports live score web app that could show and update real-time data anytime, anywhere from thousands of leagues and championships worldwide across 5 different sport types.",
         "year": "2019",
         "role": "Front-end development",
         "address": "https://www.flygoal.com"
       },
 
-      "contents": [
-        {
-          "image": "https://via.placeholder.com/1920x768",
-          "heading": "Iterative approaches to corporate strategy",
-          "paragraph": "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x210"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/1920x650",
-          "heading": "Bring to the table win-win survival strategies",
-          "paragraph": "At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x700",
-            "https://via.placeholder.com/439x750",
-            "https://via.placeholder.com/439x440"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/1920x400",
-          "heading": "User generated content in real-time",
-          "paragraph": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps",
-
-          "screenshots": [
-            "https://via.placeholder.com/600x740",
-            "https://via.placeholder.com/439x720",
-            "https://via.placeholder.com/768x750"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/1920x500",
-          "heading": "Taking seamless key performance indicators offline to maximise the long tail",
-          "paragraph": "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        }
-      ],
-      
-      "footerImage": "https://via.placeholder.com/1920x450"
+      "screenshots": [
+        "https://via.placeholder.com/439x440",
+        "https://via.placeholder.com/439x700",
+        "https://via.placeholder.com/439x750",
+        "https://via.placeholder.com/439x440"
+      ]
     },
 
     { 
       "id": "warta-bola",
+
+      "thumbnails": {
+        "desktop": "https://i.imgur.com/9GVifbN.png",
+        "mobile": "https://i.imgur.com/bGAhEqX.png"
+      },
+
       "title": "Warta Bola",
       "subtitle": "Wordpress based soccer news site",
 
@@ -75,58 +44,22 @@
         "address": "https://www.wartabola.id"
       },
 
-      "contents": [
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Iterative approaches to corporate strategy",
-          "paragraph": "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x210"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Bring to the table win-win survival strategies",
-          "paragraph": "At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "User generated content in real-time",
-          "paragraph": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Taking seamless key performance indicators offline to maximise the long tail",
-          "paragraph": "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        }
-      ],
-      
-      "footerImage": "https://via.placeholder.com/487x400"
+      "screenshots": [
+        "https://via.placeholder.com/439x440",
+        "https://via.placeholder.com/439x700",
+        "https://via.placeholder.com/439x750",
+        "https://via.placeholder.com/439x440"
+      ]
     },
 
     { 
       "id": "neoxxi",
+
+      "thumbnails": {
+        "desktop": "https://i.imgur.com/9GVifbN.png",
+        "mobile": "https://i.imgur.com/bGAhEqX.png"
+      },
+
       "title": "NeoXXI",
       "subtitle": "Watch your favorite movies and series anytime, anywhere",
 
@@ -137,116 +70,12 @@
         "address": "https://www.neoxxi.com"
       },
 
-      "contents": [
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Iterative approaches to corporate strategy",
-          "paragraph": "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x210"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Bring to the table win-win survival strategies",
-          "paragraph": "At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "User generated content in real-time",
-          "paragraph": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Taking seamless key performance indicators offline to maximise the long tail",
-          "paragraph": "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        }
-      ],
-      
-      "footerImage": "https://via.placeholder.com/487x400"
-    },
-
-    { 
-      "id": "pubgoal",
-      "title": "Pubgoal",
-      "subtitle": "real-time sports live score site",
-
-      "overview": {
-        "goal": "Efficiently unleash cross-media information without cross-media value",
-        "year": "2019",
-        "role": "UI/UX design, front-end development",
-        "address": "https://www.pubgoal.com"
-      },
-
-      "contents": [
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Iterative approaches to corporate strategy",
-          "paragraph": "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x210"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Bring to the table win-win survival strategies",
-          "paragraph": "At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "User generated content in real-time",
-          "paragraph": "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        },
-
-        {
-          "image": "https://via.placeholder.com/487x400",
-          "heading": "Taking seamless key performance indicators offline to maximise the long tail",
-          "paragraph": "Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration",
-
-          "screenshots": [
-            "https://via.placeholder.com/439x440",
-            "https://via.placeholder.com/439x440"
-          ]
-        }
-      ],
-      
-      "footerImage": "https://via.placeholder.com/487x400"
+      "screenshots": [
+        "https://via.placeholder.com/439x440",
+        "https://via.placeholder.com/439x700",
+        "https://via.placeholder.com/439x750",
+        "https://via.placeholder.com/439x440"
+      ]
     }
   ]
 }

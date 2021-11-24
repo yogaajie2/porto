@@ -11,16 +11,23 @@
           :to="`projects/${ project.id }`"
           @click.native="$nuxt.$emit('showTransition')"
         >
-        <img
-          src="https://via.placeholder.com/1200x540"
-          class="mb-12"
-        />
-        
-        <h4>{{ project.overview.role }}</h4>
-    
-          <h2 class="text-tertiary lg:mb-4">{{ project.title }}</h2>
-    
-        <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.subtitle }}</p>
+          <div class="mb-11 relative">
+            <img
+              :src="project.thumbnails.desktop"
+              class="rounded-lg w-10/12"
+            />
+
+            <img
+              :src="project.thumbnails.mobile"
+              class="absolute right-0 rounded-lg top-1/4 w-1/5"
+            />
+          </div>
+          
+          <h4>{{ project.overview.role }}</h4>
+      
+            <h2 class="text-tertiary lg:mb-4">{{ project.title }}</h2>
+      
+          <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.subtitle }}</p>
         </NuxtLink>
       </div>
     </SlideUp>
