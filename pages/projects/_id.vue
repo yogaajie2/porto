@@ -42,37 +42,20 @@
       </div>
     </section>
 
-    <section
+    <!-- <section
       v-for="(content, index) in project.contents"
       :key="index"
       class="space-y-8 pb-16 bg-secondary text-primary lg:space-y-16"
-    >
-      <img
-        :src="content.image"
-        class="w-screen"
-      />
-
-      <div class="space-y-16 container mx-auto px-8 md:px-16 lg:px-24 xl:px-32">
-        <div class="items-center space-y-4 lg:flex lg:space-x-16 lg:space-y-0">
-          <h2>{{ content.heading }}</h2>
-          <p class="lg:w-3/5">{{ content.paragraph }}</p>
-        </div>
-
-        <div class="space-y-8 lg:grid lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 lg:items-center lg:space-y-0">
-          <img
-            v-for="(screenshot, index) in content.screenshots"
-            :key="index"
-            :src="screenshot"
-            class="mx-auto"
-          />
-        </div>
+    > -->
+      <div class="space-y-8 bg-secondary text-primary lg:grid lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 lg:items-center lg:space-y-0">
+        <img
+          v-for="(screenshot, index) in project.screenshots"
+          :key="index"
+          :src="screenshot"
+          class="mx-auto"
+        />
       </div>
-    </section>
-
-    <img
-      :src="project.footerImage"
-      class="w-screen"
-    />
+    <!-- </section> -->
 
     <section class="container mx-auto px-8 py-24 md:px-16 lg:px-24 xl:px-32">
       <h3>Next Project:</h3>
