@@ -1,8 +1,8 @@
 <template>
   <main>
     <PageHeader
-      pageSubtitle="Let's create something special."
-      pageTitle="Transform your idea into a pixel-perfect design."
+      pageSubtitle="Let's work and collaborate together."
+      pageTitle="Have an interesting project in mind?"
     />
 
     <section class="container mx-auto px-8 py-12 md:px-16 md:py-20 lg:px-24 lg:py-20 xl:px-32">
