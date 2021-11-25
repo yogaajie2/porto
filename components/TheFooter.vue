@@ -2,7 +2,10 @@
   <footer class="bg-primary-lighter">
     <div class="container mx-auto px-8 pt-12 pb-12 text-secondary md:px-16 lg:px-24 xl:px-32">
       <div class="space-y-8 md:space-y-24 lg:flex lg:items-center lg:justify-between lg:space-y-0">
-        <div class="md:text-center lg:text-left lg:space-y-0">
+        <div
+          v-show="$nuxt.$route.path != '/contact'"
+          class="md:text-center lg:text-left lg:space-y-0"
+        >
           <h2 class="mb-8">Have a project?</h2>
           <CTA />
         </div>
