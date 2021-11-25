@@ -32,3 +32,13 @@
 .back-and-forth {
   animation: back-and-forth 800ms ease-in-out infinite alternate;
 }
+
+/* up and down */
+@keyframes up-and-down {
+  from {transform: translate(0, 0);}
+  to {transform: translate(0, -0.5rem);}
+}
+
+.up-and-down {
+  animation: up-and-down 800ms ease-in-out infinite alternate;
+}
