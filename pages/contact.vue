@@ -5,7 +5,10 @@
       pageTitle="Have an interesting project in mind?"
     />
 
-    <section class="container mx-auto px-8 py-12 md:px-16 md:py-20 lg:px-24 lg:py-20 xl:px-32">
+    <section
+      id="contactForm"
+      class="container mx-auto px-8 py-12 md:px-16 md:py-20 lg:px-24 lg:py-20 xl:px-32"
+    >
       <h3 class="mb-4">Let's talk</h3>
       <h2 class="mb-20 lg:text-5xl xl:text-6xl">Hello! Let's talk about your new project</h2>
       
