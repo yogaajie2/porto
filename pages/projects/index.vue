@@ -1,8 +1,8 @@
 <template>
   <main>
     <PageHeader
-      pageSubtitle="8 years of design work."
-      pageTitle="Difference lies in the details."
+      pageSubtitle="Personal or together in teams."
+      pageTitle="Every project a new opportunity."
     />
 
     <ProjectList />
