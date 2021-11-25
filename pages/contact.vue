@@ -52,6 +52,18 @@
 
 <script>
 export default {
-  head: { titleTemplate: '%s | Contact' }
-};
+  head: { titleTemplate: '%s | Contact' },
+
+  mounted() {
+    this.$nuxt.$on('emitScrollToContactForm', this.scrollToContactForm);
+  },
+
+  methods: {
+    scrollToContactForm() {
+      this.$el.querySelector('#contactForm').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  }
+}
 </script>
