@@ -46,15 +46,20 @@ export default {
   data() {
     return {
       isPlaceholderShown: true,
-      isProjectShown: false
+      isProjectShown: false,
+      observer: null
     }
   },
 
   mounted() {
     let options = { threshold: 1.0 }
 
-    let observer = new IntersectionObserver(this.handleObserver, options);
-    observer.observe(this.$el);
+    this.observer = new IntersectionObserver(this.handleObserver, options);
+    this.observer.observe(this.$el);
+  },
+
+  destroyed() {
+    this.observer.disconnect();
   },
 
   methods: {
