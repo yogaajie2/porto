@@ -22,13 +22,9 @@
             <h1 v-show="isTitleShown">{{ pageTitle }}</h1>
           </SlideUp>
   
-          <transition
-            enter-class="opacity-0 -translate-x-4"
-            enter-active-class="transition transform duration-500"
-            enter-to-class="opacity-100 -translate-x-0"
-          >
+          <SlideRight>
             <CTA v-show="isCTAShown" />
-          </transition>
+          </SlideRight>
         </div>
       </div>
     </ZoomIn>
