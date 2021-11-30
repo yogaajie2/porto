@@ -1,9 +1,9 @@
 <template>
   <footer>
     <section
-          v-show="$nuxt.$route.path != '/contact'"
+      v-show="$nuxt.$route.path != '/contact'"
       class="container mx-auto px-8 pt-12 pb-12 text-secondary bg-primary-lighter md:px-16 lg:px-24 xl:px-32"
-        >
+    >
       <!-- <div class="space-y-8 md:space-y-24 lg:flex lg:items-center lg:justify-between lg:space-y-0"> -->
         <div
           v-show="isPlaceholderShown"
@@ -98,3 +98,40 @@
     </section>
   </footer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isPlaceholderShown: true,
+      isContentShown: false,
+      isQuestionShown: false,
+      isCTAShown: false,
+      observer: null
+    }
+  },
+
+  mounted() {
+    let options = { threshold: 0.5 }
+
+    this.observer = new IntersectionObserver(this.handleObserver, options);
+    this.observer.observe(this.$el);
+  },
+  
+  destroyed() {
+    this.observer.disconnect();
+  },
+
+  methods: {
+    handleObserver(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.isPlaceholderShown = false;
+          this.isContentShown = true;
+          this.isQuestionShown = true;
+        }
+      });
+    }
+  }
+}
+</script>
