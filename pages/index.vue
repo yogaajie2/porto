@@ -7,7 +7,7 @@
     
     <ProjectList />
     <Skills />
-    <Process />
+    <KeyValues />
   </main>
 </template>
 

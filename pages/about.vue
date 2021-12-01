@@ -17,7 +17,7 @@
     </section>
 
     <Skills />
-    <Process />
+    <KeyValues />
   </main>
 </template>
 
