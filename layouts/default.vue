@@ -1,5 +1,5 @@
 <template>
-  <div id="butter">
+  <div>
     <PageTransition />
     <TheHeader />
     <Nuxt />
