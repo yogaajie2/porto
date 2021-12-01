@@ -6,12 +6,12 @@
         v-show="isContentShown"
       >
         <img
-          src="https://via.placeholder.com/1920x1080"
-          class="h-screen w-screen"
+          :src="project.thumbnails.mobile"
+          class="h-screen w-screen filter blur lg:mx-auto lg:w-auto"
         />
 
-        <div class="absolute bottom-0 w-full">
-          <div class="min-h-80 container mx-auto px-8 py-16 space-y-4 text-primary md:px-16 lg:px-24 xl:px-32">
+        <div class="absolute bottom-0 w-full bg-primary bg-opacity-40">
+          <div class="min-h-80 container mx-auto px-8 py-16 space-y-4 text-secondary md:px-16 lg:px-24 xl:px-32">
             <SlideUp @after-enter="isSubtitleShown = true">
               <h1 v-show="isTitleShown">{{ project.title }}</h1>
             </SlideUp>
@@ -47,12 +47,12 @@
       :key="index"
       class="space-y-8 pb-16 bg-secondary text-primary lg:space-y-16"
     > -->
-      <div class="space-y-8 bg-secondary text-primary lg:grid lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 lg:items-center lg:space-y-0">
+      <div class="p-4 space-y-8 bg-secondary text-primary lg:grid lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 lg:items-center lg:p-16 lg:space-y-0">
         <img
           v-for="(screenshot, index) in project.screenshots"
           :key="index"
           :src="screenshot"
-          class="mx-auto"
+          class="mx-auto lg:h-96"
         />
       </div>
     <!-- </section> -->
