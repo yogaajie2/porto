@@ -22,7 +22,7 @@
 
       <form
         action=""
-        class="space-y-16"
+        class="mb-20 space-y-16"
       >
         <div class="space-y-8 md:flex md:items-center md:justify-between md:space-y-0">
           <input
@@ -46,6 +46,12 @@
 
         <button class="block cta md:mx-auto">Send Message</button>
       </form>
+
+      <p class="border-t mb-16 pt-4">Or click the button below to view my resume</p>
+
+      <a href="https://drive.google.com/file/d/1-EPmr6BzppChbAd5sWvxVvJS6tR8ZymV/view?usp=sharing" target="_blank">
+        <button class="block cta md:mx-auto">View Resume</button>
+      </a>
     </section>
   </main>
 </template>
