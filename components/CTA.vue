@@ -2,28 +2,36 @@
   <a
     v-if="$nuxt.$route.path == '/contact'"
     href="javascript:void(0)"
-    class="items-center inline-flex"
+    class="cta group items-center inline-flex"
     @click="$nuxt.$emit('emitScrollToContactForm')"
   >
-    <p class="cta mr-4 text-tertiary">// Contact Me</p>
+    <span class="logo-on-hover">//</span>
 
-    <font-awesome-icon
-      :icon="['fas', 'arrow-down']"
-      class="up-and-down text-tertiary"
-    />
+    <div class="shift-right-8 flex items-center">
+      <p class="mr-4">Contact Me</p>
+  
+      <font-awesome-icon
+        :icon="['fas', 'arrow-down']"
+        class="up-and-down"
+      />
+    </div>
   </a>
 
   <NuxtLink
     v-else
     to="/contact"
     @click.native="$nuxt.$emit('showTransition')"
-    class="items-center inline-flex"
+    class="cta group items-center inline-flex"
   >
-    <p class="cta mr-4 text-tertiary">// Let's Work Together</p>
+    <span class="logo-on-hover">//</span>
 
-    <font-awesome-icon
-      :icon="['fas', 'arrow-right']"
-      class="back-and-forth text-tertiary"
-    />
+    <div class="shift-right-8 flex items-center">
+      <p class="mr-4">Let's Work Together</p>
+  
+      <font-awesome-icon
+        :icon="['fas', 'arrow-right']"
+        class="back-and-forth"
+      />
+    </div>
   </NuxtLink>
 </template>

@@ -17,10 +17,11 @@
     >
       <NuxtLink
         to="/projects"
-        class="items-center inline-flex"
+        class="group items-center inline-flex text-tertiary font-heading font-bold uppercase lg:text-lg"
         @click.native="$nuxt.$emit('showTransition')"
       >
-        <p class="text-tertiary border-tertiary mr-4 border-b font-heading font-bold pb-1 uppercase lg:text-lg;">View all projects</p>
+        <span class="logo-on-hover hidden lg:block">//</span>
+        <p class="shift-right-8 border-b border-tertiary translate-x-0">View all projects</p>
       </NuxtLink>
     </div>
   </section>

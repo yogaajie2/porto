@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-20 lg:w-5/12">
+  <div class="link group mb-20 lg:w-5/12">
     <div
       v-show="isPlaceholderShown"
       class="h-96"
@@ -24,9 +24,12 @@
           </div>
           
           <h4>{{ project.overview.role }}</h4>
-      
-            <h2 class="text-tertiary lg:mb-4">{{ project.title }}</h2>
-      
+
+          <div class="font-heading text-tertiary lg:mb-4">
+            <span class="logo-on-hover hidden lg:block lg:text-4xl xl:text-5xl">//</span>
+            <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">{{ project.title }}</h2>
+          </div>
+
           <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.subtitle }}</p>
         </NuxtLink>
       </div>
