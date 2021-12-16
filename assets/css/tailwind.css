@@ -90,6 +90,6 @@
 
 @layer components {
   .cta {
-    @apply border-b font-heading font-bold pb-1 uppercase lg:text-lg;
+    @apply font-heading font-bold uppercase text-tertiary lg:text-lg;
   }
 }
