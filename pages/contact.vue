@@ -44,13 +44,19 @@
           ></textarea>
         </div>
 
-        <button class="block cta md:mx-auto">Send Message</button>
+        <button class="cta group flex md:mx-auto">
+          <span class="logo-on-hover hidden lg:block">//</span>
+          <span class="shift-right-8 border-b border-tertiary translate-x-0">Send Message</span>
+        </button>
       </form>
 
       <p class="border-t mb-16 pt-4">Or click the button below to view my resume</p>
 
       <a href="https://drive.google.com/file/d/1-EPmr6BzppChbAd5sWvxVvJS6tR8ZymV/view?usp=sharing" target="_blank">
-        <button class="block cta md:mx-auto">View Resume</button>
+        <button class="cta group flex md:mx-auto">
+          <span class="logo-on-hover hidden lg:block">//</span>
+          <span class="shift-right-8 border-b border-tertiary translate-x-0">View Resume</span>
+        </button>
       </a>
     </section>
   </main>

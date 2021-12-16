@@ -37,7 +37,7 @@
           v-else
           :href="value"
           target="blank"
-          class="underline"
+          class="underline transition-colors duration-200 hover:text-tertiary"
         >{{ value }}</a>
       </div>
     </section>
@@ -62,22 +62,31 @@
 
       <NuxtLink
         :to="nextProject.id"
-        class="flex items-center mb-16"
+        class="group flex items-center mb-16 font-heading text-tertiary"
         @click.native="$nuxt.$emit('showTransition')"
       >
-        <h2 class="text-tertiary mr-4">{{ nextProject.title }}</h2>
-        
-        <font-awesome-icon
-          :icon="['fas', 'angle-double-right']"
-          class="text-tertiary"
-        />
+        <!-- <div class="font-heading text-tertiary lg:mb-4">
+          <span class="logo-on-hover hidden lg:block lg:text-4xl xl:text-5xl">//</span>
+          <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">{{ project.title }}</h2>
+        </div> -->
+
+        <span class="logo-on-hover hidden lg:block lg:text-4xl xl:text-5xl">//</span>
+
+        <!-- <div class="shift-right-16 font-bold translate-x-0 lg:font-normal"> -->
+          <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">{{ nextProject.title }}</h2>
+          
+          <!-- <font-awesome-icon
+            :icon="['fas', 'angle-double-right']"
+            class="text-5xl text-tertiary"
+          /> -->
+        <!-- </div> -->
       </NuxtLink>
 
       <NuxtLink
         to="/projects"
         @click.native="$nuxt.$emit('showTransition')"
       >
-        <p class="font-heading font-bold text-xl underline">Back to all projects</p>
+        <p class="font-heading font-bold text-xl underline transition-colors duration-200 hover:text-tertiary">Back to all projects</p>
       </NuxtLink>
     </section>
   </main>
