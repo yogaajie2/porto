@@ -22,7 +22,10 @@
             enter-to-class="opacity-100"
             @after-enter="isBrandShown = true"
           >
-            <span v-show="isLogoShown">//</span>
+            <span
+              v-show="isLogoShown"
+              class="mr-2"
+            >//</span>
           </transition>
 
           <transition
