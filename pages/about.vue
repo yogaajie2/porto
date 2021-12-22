@@ -5,9 +5,10 @@
       pageTitle="Always curious, constantly learning."
     />
 
-    <section class="container mx-auto px-8 py-12 md:px-16 lg:px-24 xl:px-32">
-      <h3>About me</h3>
-      <h2 class="mb-12 lg:text-5xl xl:text-6xl">Hello, I am Yoga Prasetya.</h2>
+      <SectionTitle 
+        sectionTitle="About me"
+        sectionSubtitle="Hello, I am Yoga Prasetya"
+      />
       
       <img
         src="https://i.imgur.com/5ioqq3c.png"

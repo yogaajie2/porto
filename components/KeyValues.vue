@@ -1,7 +1,8 @@
 <template>
-  <section class="bg-primary container mx-auto px-8 py-12 text-secondary md:p-16 lg:px-24 lg:py-20 xl:px-32">
-    <h3 class="mb-4">Key Values</h3>
-    <h2 class="mb-20 lg:text-5xl xl:text-6xl">These are the key values I follow when I write or develop code</h2>
+    <SectionTitle 
+      sectionTitle="Key Values"
+      sectionSubtitle="These are the key values I follow when I write or develop code"
+    />
 
     <div class="text-center space-y-16 lg:flex lg:flex-wrap lg:space-y-0">
       <div class="lg:mb-24 lg:w-1/2">

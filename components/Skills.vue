@@ -1,8 +1,9 @@
 <template>
   <section class="bg-secondary">
-    <div class="container mx-auto px-8 py-12 text-primary md:px-16 lg:px-24 xl:px-32">
-      <h3 class="mb-4">Practical Skills</h3>
-      <h2 class="mb-20 lg:text-5xl xl:text-6xl">I strive to incorporate new & emerging technologies to my tech stack.</h2>
+      <SectionTitle 
+        sectionTitle="Practical Skills"
+        sectionSubtitle="I strive to incorporate new & emerging technologies to my tech stack"
+      />
 
       <div class="lg:flex lg:items-end lg:justify-between">
         <div
