@@ -6,6 +6,7 @@
     />
 
     <ProjectList />
+    <BottomQuestion />
   </main>
 </template>
 

@@ -8,6 +8,7 @@
     <ProjectList />
     <Skills />
     <KeyValues />
+    <BottomQuestion />
   </main>
 </template>
 

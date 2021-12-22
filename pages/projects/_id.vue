@@ -94,6 +94,8 @@
         <p class="font-heading font-bold text-xl underline transition-colors duration-200 hover:text-tertiary">Back to all projects</p>
       </NuxtLink>
     </section>
+
+    <BottomQuestion />
   </main>
 </template>
 
