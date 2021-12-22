@@ -1,5 +1,6 @@
 <template>
   <section class="bg-secondary">
+    <div class="container py-12 text-primary">
       <SectionTitle 
         sectionTitle="Practical Skills"
         sectionSubtitle="I strive to incorporate new & emerging technologies to my tech stack"
@@ -13,7 +14,7 @@
 
         <div
           v-show="isListShown"
-          class="flex justify-between mb-12 md:justify-around md:mb-20 lg:mb-0 lg:space-x-16"
+          class="flex justify-between mb-12 md:mb-20 lg:flex-col lg:mb-0 lg:space-y-8"
         >
           <div>
             <p class="font-bold mb-2 lg:text-2xl">Tools & Languages</p>
@@ -31,7 +32,7 @@
             </transition-group>
           </div>
 
-          <div class="md:text-right">
+          <div class="md:text-right lg:text-left">
             <p class="font-bold mb-2 lg:text-2xl">Frameworks</p>
             
             <transition-group

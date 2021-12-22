@@ -2,7 +2,7 @@
   <a
     v-if="$nuxt.$route.path == '/contact'"
     href="javascript:void(0)"
-    class="cta group items-center inline-flex"
+    class="cta group items-center inline-flex lg:text-xl xl:text-2xl"
     @click="$nuxt.$emit('emitScrollToContactForm')"
   >
     <span class="logo-on-hover">//</span>
@@ -21,7 +21,7 @@
     v-else
     to="/contact"
     @click.native="$nuxt.$emit('showTransition')"
-    class="cta group items-center inline-flex"
+    class="cta group items-center inline-flex lg:text-xl xl:text-2xl"
   >
     <span class="logo-on-hover">//</span>
 

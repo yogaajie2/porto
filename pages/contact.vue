@@ -7,14 +7,14 @@
 
     <section
       id="contactForm"
-      class="container mx-auto px-8 py-12 md:px-16 md:py-20 lg:px-24 lg:py-20 xl:px-32"
+      class="container py-12 md:py-20"
     >
       <SectionTitle 
         sectionTitle="Let's talk"
         sectionSubtitle="Hello! Let's talk about your new project"
       />
       
-      <p class="mb-8">
+      <p class="mb-8 lg:mb-16">
         Fill in the form to contact me or send an email to
         <a
           href="mailto:yogaajie2@gmail.com"
@@ -24,25 +24,25 @@
 
       <form
         action=""
-        class="mb-20 space-y-16"
+        class="mb-20 space-y-16 lg:mb-32 lg:space-y-32"
       >
-        <div class="space-y-8 md:flex md:items-center md:justify-between md:space-y-0">
+        <div class="grid gap-y-8 md:grid-cols-2 md:gap-x-8 md:gap-y-16 lg:gap-y-32">
           <input
             type="text"
             placeholder="What's your name?"
-            class="bg-primary border-b"
+            class="bg-primary border-b px-4"
           />
 
           <input
             type="email"
             placeholder="What's your email?"
-            class="bg-primary border-b"
+            class="bg-primary border-b px-4"
           />
 
           <textarea
             rows="5"
             placeholder="Tell me more about the project"
-            class="bg-primary border-b"
+            class="bg-primary border-b px-4 md:col-span-2"
           ></textarea>
         </div>
 
@@ -52,7 +52,7 @@
         </button>
       </form>
 
-      <p class="border-t mb-16 pt-4">Or click the button below to view my resume</p>
+      <p class="border-t mb-16 pt-4 md:pt-8 md:text-center lg:mb-8 lg:pt-16">Or click the button below to view my resume</p>
 
       <a href="https://drive.google.com/file/d/1-EPmr6BzppChbAd5sWvxVvJS6tR8ZymV/view?usp=sharing" target="_blank">
         <button class="cta group flex md:mx-auto">

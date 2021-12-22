@@ -11,7 +11,7 @@
         />
 
         <div class="absolute bottom-0 w-full bg-primary bg-opacity-40">
-          <div class="min-h-80 container mx-auto px-8 py-16 space-y-4 text-secondary md:px-16 lg:px-24 xl:px-32">
+          <div class="min-h-80 container py-16 space-y-4 text-secondary">
             <SlideUp @after-enter="isSubtitleShown = true">
               <h1 v-show="isTitleShown">{{ project.title }}</h1>
             </SlideUp>
@@ -24,13 +24,12 @@
       </section>
     </ZoomIn>
 
-    <section class="space-y-8 container mx-auto px-8 py-16 md:flex md:flex-wrap md:justify-between md:space-y-0 md:pb-8 md:px-16 lg:px-24">
+    <section class="container grid py-16 gap-y-8 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-16 xl:py-28 xl:text-lg">
       <div
         v-for="(value, index) in project.overview"
         :key="index"
-        class="md:w-5/12 md:pb-8"
       >
-        <h6 class="mb-4">{{ index }}</h6>
+        <h6 class="mb-2">{{ index }}</h6>
         <p v-if="index != 'address'">{{ value }}</p>
 
         <a
@@ -47,17 +46,23 @@
       :key="index"
       class="space-y-8 pb-16 bg-secondary text-primary lg:space-y-16"
     > -->
-      <div class="p-4 space-y-8 bg-secondary text-primary lg:grid lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 lg:items-center lg:p-16 lg:space-y-0">
+      <section class="py-8 bg-secondary text-primary xl:py-12">
+        <div class="container">
+          <h2 class="mb-8 font-heading text-center xl:mb-12">Gallery</h2>
+  
+          <div class="space-y-8">
         <img
           v-for="(screenshot, index) in project.screenshots"
           :key="index"
           :src="screenshot"
-          class="mx-auto lg:h-96"
+              class="mx-auto md:h-96"
         />
       </div>
+        </div>
+      </section>
     <!-- </section> -->
 
-    <section class="container mx-auto px-8 py-24 md:px-16 lg:px-24 xl:px-32">
+    <section class="container py-24">
       <h3>Next Project:</h3>
 
       <NuxtLink

@@ -1,10 +1,11 @@
 <template>
+  <section class="bg-primary container py-12 text-secondary">
     <SectionTitle 
       sectionTitle="Work Portfolio"
       sectionSubtitle="Featured Projects"
     />
     
-    <div class="lg:flex lg:flex-wrap lg:justify-between">
+    <div class="lg:flex lg:flex-wrap lg:justify-between lg:mb-16">
       <Project
         v-for="(project, index) in projectsLimited"
         :key="index"
@@ -14,11 +15,11 @@
 
     <div
       v-if="this.$route.path != '/projects'"
-      class="mb-20 text-center"
+      class="mb-20 text-center lg:mb-10"
     >
       <NuxtLink
         to="/projects"
-        class="group items-center inline-flex text-tertiary font-heading font-bold uppercase lg:text-lg"
+        class="group items-center inline-flex text-tertiary font-heading font-bold uppercase lg:text-xl"
         @click.native="$nuxt.$emit('showTransition')"
       >
         <span class="logo-on-hover hidden lg:block">//</span>

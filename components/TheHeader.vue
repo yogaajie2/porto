@@ -10,7 +10,7 @@
       v-show="isHeaderShown"
       :class="{ '-translate-y-full': isScrolledDown }"
     >
-      <div class="flex h-20 items-center justify-between container mx-auto px-8 py-4 top-0 md:px-16 lg:px-24 lg:py-8 xl:px-32">
+      <div class="flex h-20 items-center justify-between container py-4">
         <NuxtLink
           to="/"
           class="font-heading text-3xl"
