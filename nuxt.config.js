@@ -59,7 +59,10 @@ export default {
   },
 
   router: {
-    middleware: 'delay'
+    middleware: [
+      'emit-transition',
+      // 'delay'
+    ]
   },
 
   server: {     
