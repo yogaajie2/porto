@@ -10,7 +10,10 @@ module.exports = {
   theme: {
     extend: {
       minHeight: {
+        '22': '5.5rem',
+        '23': '5.75rem',
         '24': '6rem',
+        '40': '10rem',
         '80': '20rem'
       },
 
@@ -24,6 +27,11 @@ module.exports = {
 
       skew: {
         '-8': '-8deg'
+      },
+
+      spacing: {
+        '42': '11.5rem',
+        '88': '22rem'
       },
 
       zIndex: {
@@ -44,6 +52,17 @@ module.exports = {
       black: '#000',
       white: '#fff',
       transparent: 'transparent'
+    },
+
+    container: {
+      center: true,
+
+      padding: {
+        DEFAULT: '2rem',
+        md: '4rem',
+        lg: '6rem',
+        xl: '8rem'
+      }
     },
 
     fontFamily: {
