@@ -6,7 +6,7 @@
         v-show="isContentShown"
       >
         <img
-          :src="project.thumbnails.mobile"
+          :src="headerBackground"
           class="h-screen w-screen filter blur lg:mx-auto lg:w-auto"
         />
 
@@ -51,13 +51,13 @@
           <h2 class="mb-8 font-heading text-center xl:mb-12">Gallery</h2>
   
           <div class="space-y-8">
-        <img
-          v-for="(screenshot, index) in project.screenshots"
-          :key="index"
-          :src="screenshot"
+            <img
+              v-for="(screenshot, index) in project.screenshots"
+              :key="index"
+              :src="screenshot"
               class="mx-auto md:h-96"
-        />
-      </div>
+            />
+          </div>
         </div>
       </section>
     <!-- </section> -->
@@ -106,6 +106,7 @@ export default {
   data() {
     return {
       isContentShown: false,
+      headerBackground: '',
       isSubtitleShown: false,
       isTitleShown: false,
       projects: data.projects
@@ -124,10 +125,22 @@ export default {
 
   mounted() {
     this.$nuxt.$on('emitShowContents', this.showContents);
+
+    let mediaQuery = window.matchMedia('(min-width: 1024px)');
+    this.determineHeaderBackground(mediaQuery);
+    mediaQuery.addEventListener('change', this.determineHeaderBackground);
   },
 
   methods: {
     showContents() { this.isContentShown = true; },
+
+    determineHeaderBackground(mediaQuery) {
+      if (mediaQuery.matches) {
+        this.headerBackground = this.project.thumbnails.desktop;
+      } else {
+        this.headerBackground = this.project.thumbnails.mobile;
+      }
+    },
 
     findIndex() {
       let currentIndex = this.projects.indexOf(this.project);
@@ -142,6 +155,6 @@ export default {
 
   head() {
     return { titleTemplate: '%s | ' + this.project.title + ' Project' };
-  },
+  }
 }
 </script>
