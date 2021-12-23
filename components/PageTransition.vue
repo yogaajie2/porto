@@ -28,7 +28,7 @@
       class="fixed flex h-screen items-center justify-center top-0 w-screen z-20"
       v-show="isFirstLoad"
     >
-      <span class="fade-in-out text-5xl text-tertiary">//</span>
+      <span class="fade-in-out font-heading text-5xl text-tertiary md:text-6xl xl:text-7xl">//</span>
     </div>
   </div>
 </template>
@@ -81,7 +81,7 @@ export default {
 <style scoped>
 .curtain-left,
 .curtain-right {
-  transform: scaleX(2.5) skewX(-8deg);
+  transform: scaleX(4.5) skewX(-8deg);
 }
 
 .reveal-right-enter-active,
@@ -93,11 +93,11 @@ export default {
 
 .reveal-left-enter,
 .reveal-left-leave-to {
-  transform: translateX(-250%) scaleX(2.5) skewX(-8deg);
+  transform: translateX(-400%) scaleX(4.5) skewX(-8deg);
 }
 
 .reveal-right-enter,
 .reveal-right-leave-to {
-  transform: translateX(250%) scaleX(2.5) skewX(-8deg);
+  transform: translateX(400%) scaleX(4.5) skewX(-8deg);
 }
 </style>
