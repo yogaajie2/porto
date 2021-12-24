@@ -28,7 +28,7 @@
       class="fixed flex h-screen items-center justify-center top-0 w-screen z-20"
       v-show="isFirstLoad"
     >
-      <span class="fade-in-out font-heading text-5xl text-tertiary md:text-6xl xl:text-7xl">//</span>
+      <span class="animate-fade-in-out font-heading text-5xl text-tertiary md:text-6xl xl:text-7xl">//</span>
     </div>
   </div>
 </template>
