@@ -1,13 +1,3 @@
-/* Fade-in-out */
-@keyframes fade-in-out {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-.fade-in-out {
-  animation: fade-in-out 600ms infinite alternate;
-}
-
 /* Reveal */
 .reveal-left {
   transform: translate(-100%) scaleX(2.5) skewX(-8deg);

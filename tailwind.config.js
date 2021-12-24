@@ -6,7 +6,9 @@ module.exports = {
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
   ],
+
   darkMode: false, // or 'media' or 'class'
+
   theme: {
     extend: {
       minHeight: {
@@ -15,6 +17,15 @@ module.exports = {
         '24': '6rem',
         '40': '10rem',
         '80': '20rem'
+      },
+      
+      zIndex: {
+        '-10': '-10'
+      },
+
+      spacing: {
+        '42': '11.5rem',
+        '88': '22rem'
       },
 
       transitionDuration: {
@@ -29,13 +40,15 @@ module.exports = {
         '-8': '-8deg'
       },
 
-      spacing: {
-        '42': '11.5rem',
-        '88': '22rem'
+      animation: {
+        'fade-in-out': 'fade-in-out 600ms infinite alternate'
       },
 
-      zIndex: {
-        '-10': '-10'
+      keyframes: {
+        'fade-in-out': {
+          'from': { opacity: '0' },
+          'to': { opacity: '1' }
+        }
       }
     },
 
@@ -66,14 +79,17 @@ module.exports = {
     },
 
     fontFamily: {
-      'body': ['Montserrat', 'sans-serif'],
-      'heading': ['Raleway', 'sans-serif']
+      'heading': ['Raleway', 'sans-serif'],
+      'body': ['Montserrat', 'sans-serif']
     }
   },
+
   variants: {
     extend: {
-      translate: ['group-hover']
-    },
+      translate: ['group-hover'],
+      animation: ['group-hover']
+    }
   },
+
   plugins: [],
 }
