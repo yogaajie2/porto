@@ -13,7 +13,7 @@
       <div class="flex h-20 items-center justify-between container py-4">
         <NuxtLink
           to="/"
-          class="font-heading text-3xl"
+          class="group font-heading text-3xl"
           @click.native="$nuxt.$emit('showTransition')"
         >
           <transition
@@ -24,7 +24,7 @@
           >
             <span
               v-show="isLogoShown"
-              class="mr-2"
+              class="mr-2 lg:group-hover:animate-fade-in-out"
             >//</span>
           </transition>
 
