@@ -20,7 +20,8 @@
         <div class="space-y-4 lg:space-y-8 xl:text-lg">
           <p>I am a front-end developer based in the Greater Jakarta Area, Indonesia where I have been working for more than 2 years.</p>
           <p>I have worked on projects both personally and together in teams, and I consider every project as an opportunity to learn, collaborate, and further improve my skills.</p>
-          <!-- Add one more paragraph here -->
+          <p>I primarily use <a href="https://vuejs.org/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Vue.js</a> together with <a href="https://nuxtjs.org/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Nuxt.js</a> as the go-to framework. I also prefer using <a href="https://tailwindcss.com/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Tailwind CSS</a> to help maintain my design systems.</p>
+          <p>I emphasize the use of subtle motions and animations in my projects to spice up static and dull UI/UX a little bit.</p>
         </div>
       </div>
     </section>
