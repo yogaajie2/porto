@@ -19,6 +19,10 @@
       class="mb-14 text-center lg:mb-10"
       @on-intersecting="handleIntersecting"
     >
+      <transition
+        enter-class="opacity-0"
+        enter-active-class="transition duration-500 delay-300"
+        enter-to-class="opacity-100"
     >
       <NuxtLink
           v-if="isViewAllProjectsShown"
@@ -29,6 +33,7 @@
         <span class="logo-on-hover hidden lg:block">//</span>
         <p class="shift-right-8 border-b border-tertiary translate-x-0">View all projects</p>
       </NuxtLink>
+      </transition>
     </IntersectionObserverTarget>
   </section>
 </template>

@@ -25,7 +25,7 @@
             
             <transition-group
               enter-class="opacity-0 translate-y-4"
-              enter-active-class="transition transform duration-500"
+              enter-active-class="transition transform duration-500 delay-300"
               enter-to-class="opacity-100 translate-y-0"
             >
               <p
@@ -41,7 +41,7 @@
             
             <transition-group
               enter-class="opacity-0 translate-y-4"
-              enter-active-class="transition transform duration-500"
+              enter-active-class="transition transform duration-500 delay-300"
               enter-to-class="opacity-100 translate-y-0"
             >
               <p
@@ -84,11 +84,11 @@ export default {
 
   methods: {
     handleIntersecting(entry, unobserve) {
-        if (entry.isIntersecting) {
-          this.isPlaceholderShown = false;
-          this.isListShown = true;
+      if (entry.isIntersecting) {
+        this.isPlaceholderShown = false;
+        this.isListShown = true;
         unobserve();
-        }
+      }
     }
   }
 }

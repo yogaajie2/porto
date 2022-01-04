@@ -13,7 +13,7 @@
         />
 
         <div class="absolute bottom-0 w-full bg-primary bg-opacity-40">
-          <div class="min-h-80 container py-16 space-y-4 text-secondary">
+            <div class="container h-60 py-16 space-y-4 text-secondary md:h-64 lg:h-80">
             <SlideUp @after-enter="isSubtitleShown = true">
               <h1 v-show="isTitleShown">{{ project.title }}</h1>
             </SlideUp>
@@ -41,11 +41,17 @@
       <div
         v-for="(value, index) in project.overview"
         :key="index"
+          class="h-20 md:h-14"
       >
+          <SlideUp @after-enter="isOverviewValueShown = true">
             <h6
               v-if="isOverviewIndexShown"
               class="mb-2"
             >{{ index }}</h6>
+          </SlideUp>
+
+          <FadeIn>
+            <div v-if="isOverviewValueShown">
         <p v-if="index != 'address'">{{ value }}</p>
 
         <a
@@ -55,6 +61,8 @@
           class="underline transition-colors duration-200 hover:text-tertiary"
         >{{ value }}</a>
       </div>
+          </FadeIn>
+        </div>
       </IntersectionObserverTarget>
     </section>
 
