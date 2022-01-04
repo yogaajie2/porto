@@ -1,9 +1,11 @@
 <template>
   <main>
+    <section>
     <ZoomIn @after-enter="isTitleShown = true; $nuxt.$emit('startHeaderAnimation')">
-      <section
-        class="min-h-screen relative"
-        v-show="isContentShown"
+        <div
+          v-if="isContentShown"
+          key="content"
+          class="relative"
       >
         <img
           :src="headerBackground"
@@ -21,8 +23,14 @@
             </FadeIn>
           </div>
         </div>
+        </div>
+
+        <Placeholder
+          v-else
+          class="h-screen"  
+        />
+      </ZoomIn>
       </section>
-    </ZoomIn>
 
     <section>
       <IntersectionObserverTarget

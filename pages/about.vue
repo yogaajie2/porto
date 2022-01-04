@@ -17,10 +17,15 @@
           @on-intersecting="handleIntersectingPhoto"
         >
         <img
+              v-if="isPhotoShown"
           src="https://i.imgur.com/5ioqq3c.png"
-          class="md:mx-auto md:w-1/2 lg:h-2/5 lg:w-2/5 xl:h-1/3 xl:w-1/3"
+              class="md:mx-auto md:w-1/2 lg:w-auto xl:w-3/4"
         />
         
+            <Placeholder
+              v-else
+              class="h-78 md:h-80 lg:h-82 xl:h-88"
+            />
         </IntersectionObserverTarget>
 
         <IntersectionObserverTarget

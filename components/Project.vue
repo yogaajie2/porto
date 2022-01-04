@@ -5,7 +5,6 @@
     @on-intersecting="handleIntersecting"
   >
     <SlideUp>
-      <div v-show="isProjectShown">
         <NuxtLink
         v-if="isProjectShown"
           :to="`projects/${ project.id }`"
@@ -32,7 +31,11 @@
 
           <p class="none lg:block lg:text-gray-500 lg:text-xl">{{ project.subtitle }}</p>
         </NuxtLink>
-      </div>
+    
+      <Placeholder
+        v-else
+        class="h-96"
+      />
     </SlideUp>
   </IntersectionObserverTarget>
 </template>
@@ -48,9 +51,7 @@ export default {
 
   data() {
     return {
-      isPlaceholderShown: true,
       isProjectShown: false,
-      observer: null
     }
   },
 

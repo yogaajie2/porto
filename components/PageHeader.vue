@@ -27,6 +27,11 @@
           </SlideRight>
         </div>
       </div>
+      
+      <Placeholder
+        v-else
+        class="h-screen pt-40 bg-primary-light md:pt-60"  
+      />
     </ZoomIn>
   </section>
 </template>
