@@ -1,20 +1,16 @@
 <template>
   <section>
-    <div
-      v-show="isPlaceholderShown"
-      class="min-h-screen"
-    ></div>
-
     <ZoomIn @after-enter="isSubtitleShown = true; $nuxt.$emit('startHeaderAnimation')">
       <div
         v-if="isContentShown"
         key="content"
+        class="h-screen pt-40 bg-primary-light md:pt-60"
       >
-        <div class="h-screen space-y-8 container py-20">
+        <div class="container h-screen space-y-8">
           <FadeIn @after-enter="isTitleShown = true">
             <h3
-              class="opacity-0 text-gray-400"
-              v-show="isSubtitleShown"
+              class="text-gray-400"
+              v-if="isSubtitleShown"
             >{{ pageSubtitle }}</h3>
           </FadeIn>
           
