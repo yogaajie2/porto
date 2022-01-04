@@ -1,28 +1,28 @@
 <template>
   <main>
     <section>
-    <ZoomIn @after-enter="isTitleShown = true; $nuxt.$emit('startHeaderAnimation')">
+      <ZoomIn @after-enter="isTitleShown = true; $nuxt.$emit('startHeaderAnimation')">
         <div
           v-if="isContentShown"
           key="content"
           class="relative"
-      >
-        <img
-          :src="headerBackground"
-          class="h-screen w-screen filter blur lg:mx-auto lg:w-auto"
-        />
-
-        <div class="absolute bottom-0 w-full bg-primary bg-opacity-40">
+        >
+          <img
+            :src="headerBackground"
+            class="h-screen w-screen filter blur lg:mx-auto lg:w-auto"
+          />
+  
+          <div class="absolute bottom-0 w-full bg-primary bg-opacity-40">
             <div class="container h-60 py-16 space-y-4 text-secondary md:h-64 lg:h-80">
-            <SlideUp @after-enter="isSubtitleShown = true">
-              <h1 v-show="isTitleShown">{{ project.title }}</h1>
-            </SlideUp>
-            
-            <FadeIn>
-              <h4 v-show="isSubtitleShown">{{ project.subtitle }}</h4>
-            </FadeIn>
+              <SlideUp @after-enter="isSubtitleShown = true">
+                <h1 v-show="isTitleShown">{{ project.title }}</h1>
+              </SlideUp>
+              
+              <FadeIn>
+                <h4 v-show="isSubtitleShown">{{ project.subtitle }}</h4>
+              </FadeIn>
+            </div>
           </div>
-        </div>
         </div>
 
         <Placeholder
@@ -30,7 +30,7 @@
           class="h-screen"  
         />
       </ZoomIn>
-      </section>
+    </section>
 
     <section>
       <IntersectionObserverTarget
@@ -38,11 +38,11 @@
         class="container grid py-16 gap-y-8 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-16 xl:py-28 xl:text-lg"
         @on-intersecting="handleIntersecting"
       >
-      <div
-        v-for="(value, index) in project.overview"
-        :key="index"
+        <div
+          v-for="(value, index) in project.overview"
+          :key="index"
           class="h-20 md:h-14"
-      >
+        >
           <SlideUp @after-enter="isOverviewValueShown = true">
             <h6
               v-if="isOverviewIndexShown"
@@ -52,40 +52,34 @@
 
           <FadeIn>
             <div v-if="isOverviewValueShown">
-        <p v-if="index != 'address'">{{ value }}</p>
-
-        <a
-          v-else
-          :href="value"
-          target="blank"
-          class="underline transition-colors duration-200 hover:text-tertiary"
-        >{{ value }}</a>
-      </div>
+              <p v-if="index != 'address'">{{ value }}</p>
+      
+              <a
+                v-else
+                :href="value"
+                target="blank"
+                class="underline transition-colors duration-200 hover:text-tertiary"
+              >{{ value }}</a>
+            </div>
           </FadeIn>
         </div>
       </IntersectionObserverTarget>
     </section>
 
-    <!-- <section
-      v-for="(content, index) in project.contents"
-      :key="index"
-      class="space-y-8 pb-16 bg-secondary text-primary lg:space-y-16"
-    > -->
-      <section class="py-8 bg-secondary text-primary xl:py-12">
-        <div class="container">
-          <h2 class="mb-8 font-heading text-center xl:mb-12">Gallery</h2>
-  
-          <div class="space-y-8">
-            <img
-              v-for="(screenshot, index) in project.screenshots"
-              :key="index"
-              :src="screenshot"
-              class="mx-auto md:h-96"
-            />
-          </div>
+    <section class="py-8 bg-secondary text-primary xl:py-12">
+      <div class="container">
+        <h2 class="mb-8 font-heading text-center xl:mb-12">Gallery</h2>
+
+        <div class="space-y-8">
+          <img
+            v-for="(screenshot, index) in project.screenshots"
+            :key="index"
+            :src="screenshot"
+            class="mx-auto md:h-96"
+          />
         </div>
-      </section>
-    <!-- </section> -->
+      </div>
+    </section>
 
     <section class="container py-24">
       <h3>Next Project:</h3>
@@ -95,21 +89,8 @@
         class="group flex items-center mb-16 font-heading text-tertiary"
         @click.native="$nuxt.$emit('showTransition')"
       >
-        <!-- <div class="font-heading text-tertiary lg:mb-4">
-          <span class="logo-on-hover hidden lg:block lg:text-4xl xl:text-5xl">//</span>
-          <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">{{ project.title }}</h2>
-        </div> -->
-
         <span class="logo-on-hover hidden lg:block lg:text-4xl xl:text-5xl">//</span>
-
-        <!-- <div class="shift-right-16 font-bold translate-x-0 lg:font-normal"> -->
-          <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">{{ nextProject.title }}</h2>
-          
-          <!-- <font-awesome-icon
-            :icon="['fas', 'angle-double-right']"
-            class="text-5xl text-tertiary"
-          /> -->
-        <!-- </div> -->
+        <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">{{ nextProject.title }}</h2>
       </NuxtLink>
 
       <NuxtLink
@@ -128,6 +109,10 @@
 import data from "~/projects.json";
 
 export default {
+  head() {
+    return { titleTemplate: '%s | ' + this.project.title + ' Project' };
+  },
+
   data() {
     return {
       isContentShown: false,
@@ -185,10 +170,6 @@ export default {
         return 0;
       }
     }
-  },
-
-  head() {
-    return { titleTemplate: '%s | ' + this.project.title + ' Project' };
   }
 }
 </script>

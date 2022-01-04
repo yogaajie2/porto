@@ -17,12 +17,12 @@
           @on-intersecting="handleIntersectingPhoto"
         >
           <SlideUp>
-        <img
+            <img
               v-if="isPhotoShown"
-          src="https://i.imgur.com/5ioqq3c.png"
+              src="https://i.imgur.com/5ioqq3c.png"
               class="md:mx-auto md:w-1/2 lg:w-auto xl:w-3/4"
-        />
-        
+            />
+
             <Placeholder
               v-else
               class="h-78 md:h-80 lg:h-82 xl:h-88"

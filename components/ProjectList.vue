@@ -12,7 +12,7 @@
         :project="project"
       />
     </div>
-
+    
     <IntersectionObserverTarget
       v-if="this.$route.path != '/projects'"
       :threshold="1"
@@ -23,16 +23,16 @@
         enter-class="opacity-0"
         enter-active-class="transition duration-500 delay-300"
         enter-to-class="opacity-100"
-    >
-      <NuxtLink
-          v-if="isViewAllProjectsShown"
-        to="/projects"
-        class="group items-center inline-flex text-tertiary font-heading font-bold uppercase lg:text-xl"
-        @click.native="$nuxt.$emit('showTransition')"
       >
-        <span class="logo-on-hover hidden lg:block">//</span>
-        <p class="shift-right-8 border-b border-tertiary translate-x-0">View all projects</p>
-      </NuxtLink>
+        <NuxtLink
+          v-if="isViewAllProjectsShown"
+          to="/projects"
+          class="group items-center inline-flex text-tertiary font-heading font-bold uppercase lg:text-xl"
+          @click.native="$nuxt.$emit('showTransition')"
+        >
+          <span class="logo-on-hover hidden lg:block">//</span>
+          <p class="shift-right-8 border-b border-tertiary translate-x-0">View all projects</p>
+        </NuxtLink>
       </transition>
     </IntersectionObserverTarget>
   </section>
@@ -50,7 +50,9 @@ export default {
   },
 
   computed: {
-    projectsLimited() { return this.checkRoutePath(); }
+    projectsLimited() {
+      return this.checkRoutePath();
+    }
   },
 
   methods: {
