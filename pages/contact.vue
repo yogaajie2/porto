@@ -26,6 +26,11 @@
         action=""
         class="mb-20 space-y-16 lg:mb-32 lg:space-y-32"
       >
+        <IntersectionObserverTarget
+          :threshold="1"
+          class="grid h-59 gap-y-8 md:grid-cols-2 md:gap-x-8 md:gap-y-16 lg:gap-y-32"
+          @on-intersecting="handleIntersectingForm"
+        >
           <FadeIn @after-enter="isInputEmailShown = true">
             <input
               v-if="isInputNameShown"
@@ -67,6 +72,7 @@
               class="h-31"
             />
           </FadeIn>
+        </IntersectionObserverTarget>
 
         <SlideRight>
           <button
@@ -86,6 +92,10 @@
 
       <p class="border-t mb-16 pt-4 md:pt-8 md:text-center lg:mb-8 lg:pt-16">Or click the button below to view my resume</p>
 
+      <IntersectionObserverTarget
+        :threshold="1"
+        @on-intersecting="handleIntersectingViewResume"
+      >
         <a
           href="https://drive.google.com/file/d/1-EPmr6BzppChbAd5sWvxVvJS6tR8ZymV/view?usp=sharing"
           target="_blank"
@@ -101,6 +111,7 @@
             </button>
           </SlideRight>
         </a>
+      </IntersectionObserverTarget>
     </section>
   </main>
 </template>
@@ -128,7 +139,21 @@ export default {
       this.$el.querySelector('#contactForm').scrollIntoView({
         behavior: 'smooth'
       });
-    }
+    },
+
+    handleIntersectingForm(entry, unobserve) {
+      if (entry.isIntersecting) {
+        this.isInputNameShown = true;
+        unobserve();
+      }
+    },
+
+    handleIntersectingViewResume(entry, unobserve) {
+      if (entry.isIntersecting) {
+        this.isViewResumeButtonShown = true;
+        unobserve();
+      }
+    },
   }
 }
 </script>
