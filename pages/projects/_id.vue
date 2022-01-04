@@ -34,7 +34,10 @@
         v-for="(value, index) in project.overview"
         :key="index"
       >
-        <h6 class="mb-2">{{ index }}</h6>
+            <h6
+              v-if="isOverviewIndexShown"
+              class="mb-2"
+            >{{ index }}</h6>
         <p v-if="index != 'address'">{{ value }}</p>
 
         <a

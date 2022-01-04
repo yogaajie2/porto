@@ -7,13 +7,13 @@
     >
             <SlideUp @after-enter="isCTAShown = true">
               <h2
-                v-show="isQuestionShown"
+            v-if="isQuestionShown"
                 class="mb-8 lg:mb-16 xl:mb-20"
               >Have a project?</h2>
             </SlideUp>
   
             <SlideRight>
-              <CTA v-show="isCTAShown" />
+          <CTA v-if="isCTAShown" />
             </SlideRight>
           </div>
     </IntersectionObserverTarget>

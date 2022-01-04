@@ -7,8 +7,8 @@
 
     <ZoomIn @after-enter="isSubtitleShown = true; $nuxt.$emit('startHeaderAnimation')">
       <div
-        class="min-h-screen bg-primary-light pt-20 lg:mt-20"
-        v-show="isContentShown"
+        v-if="isContentShown"
+        key="content"
       >
         <div class="h-screen space-y-8 container py-20">
           <FadeIn @after-enter="isTitleShown = true">
@@ -19,11 +19,11 @@
           </FadeIn>
           
           <SlideUp @after-enter="isCTAShown = true">
-            <h1 v-show="isTitleShown">{{ pageTitle }}</h1>
+            <h1 v-if="isTitleShown">{{ pageTitle }}</h1>
           </SlideUp>
   
           <SlideRight>
-            <CTA v-show="isCTAShown" />
+            <CTA v-if="isCTAShown" />
           </SlideRight>
         </div>
       </div>

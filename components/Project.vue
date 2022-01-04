@@ -7,6 +7,7 @@
     <SlideUp>
       <div v-show="isProjectShown">
         <NuxtLink
+        v-if="isProjectShown"
           :to="`projects/${ project.id }`"
           @click.native="$nuxt.$emit('showTransition')"
         >
