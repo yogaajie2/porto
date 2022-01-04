@@ -48,7 +48,6 @@ export default {
 
   data() {
     return {
-      isPlaceholderShown: true,
       isContentShown: false,
       isSubtitleShown: false,
       isTitleShown: false,
@@ -57,14 +56,7 @@ export default {
   },
 
   mounted() {
-    this.$nuxt.$on('emitShowContents', this.showContents);
-  },
-
-  methods: {
-    showContents() {
-      this.isPlaceholderShown = false;
-      this.isContentShown = true; 
-    }
+    this.$nuxt.$on('emitShowContents', () => this.isContentShown = true);
   }
 }
 </script>
