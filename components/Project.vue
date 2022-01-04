@@ -1,10 +1,9 @@
 <template>
-  <div class="link group mb-20 lg:w-5/12">
-    <div
-      v-show="isPlaceholderShown"
-      class="h-96"
-    ></div>
-
+  <IntersectionObserverTarget
+    :threshold="1"
+    class="group mb-20 lg:w-5/12"
+    @on-intersecting="handleIntersecting"
+  >
     <SlideUp>
       <div v-show="isProjectShown">
         <NuxtLink
@@ -34,7 +33,7 @@
         </NuxtLink>
       </div>
     </SlideUp>
-  </div>
+  </IntersectionObserverTarget>
 </template>
 
 <script>
@@ -54,25 +53,12 @@ export default {
     }
   },
 
-  mounted() {
-    let options = { threshold: 1.0 }
-
-    this.observer = new IntersectionObserver(this.handleObserver, options);
-    this.observer.observe(this.$el);
-  },
-
-  destroyed() {
-    this.observer.disconnect();
-  },
-
   methods: {
-    handleObserver(entries) {
-      entries.forEach(entry => {
+    handleIntersecting(entry, unobserve) {
         if (entry.isIntersecting) {
-          this.isPlaceholderShown = false;
           this.isProjectShown = true;
+        unobserve();
         }
-      });
     }
   }
 }

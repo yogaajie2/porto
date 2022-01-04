@@ -12,17 +12,23 @@
       />
       
       <div class="flex flex-col space-y-8 md:space-y-12 lg:flex-row lg:items-center lg:space-x-12 lg:space-y-0 xl:space-x-40">
+        <IntersectionObserverTarget
+          :threshold="1"
+          @on-intersecting="handleIntersectingPhoto"
+        >
         <img
           src="https://i.imgur.com/5ioqq3c.png"
           class="md:mx-auto md:w-1/2 lg:h-2/5 lg:w-2/5 xl:h-1/3 xl:w-1/3"
         />
         
-        <div class="space-y-4 md:mx-auto md:w-10/12 lg:space-y-8 xl:w-5/12 xl:text-lg">
-          <p>I am a front-end developer based in the Greater Jakarta Area, Indonesia where I have been working for more than 2 years.</p>
-          <p>I have worked on projects both personally and together in teams, and I consider every project as an opportunity to learn, collaborate, and further improve my skills.</p>
-          <p>I primarily use <a href="https://vuejs.org/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Vue.js</a> together with <a href="https://nuxtjs.org/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Nuxt.js</a> as the go-to framework. I also prefer using <a href="https://tailwindcss.com/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Tailwind CSS</a> to help maintain my design systems.</p>
-          <p>I emphasize the use of subtle motions and animations in my projects to spice up static and dull UI/UX a little bit.</p>
-        </div>
+        </IntersectionObserverTarget>
+
+        <IntersectionObserverTarget
+          :threshold="1"
+          class="h-108 space-y-4 md:h-72 md:mx-auto md:w-10/12 lg:h-90 lg:space-y-8 xl:h-122 xl:w-5/12 xl:text-lg"
+          @on-intersecting="handleIntersectingAbout"
+        >
+        </IntersectionObserverTarget>
       </div>
     </section>
 
@@ -34,6 +40,29 @@
 
 <script>
 export default {
-  head: { titleTemplate: '%s | About' }
+  head: { titleTemplate: '%s | About' },
+
+  data() {
+    return {
+      isPhotoShown: false,
+      isFirstParagraphShown: false,
+    }
+  },
+
+  methods: {
+    handleIntersectingPhoto(entry, unobserve) {
+      if (entry.isIntersecting) {
+        this.isPhotoShown = true;
+        unobserve();
+      }
+    },
+
+    handleIntersectingAbout(entry, unobserve) {
+      if (entry.isIntersecting) {
+        this.isFirstParagraphShown = true;
+        unobserve();
+      }
+    }
+  }
 }
 </script>

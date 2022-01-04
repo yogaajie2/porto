@@ -1,6 +1,10 @@
 <template>
   <section class="bg-secondary">
-    <div class="container py-12 text-primary">
+    <IntersectionObserverTarget
+      :threshold="1"
+      class="container py-12 text-primary"
+      @on-intersecting="handleIntersecting"
+    >
       <SectionTitle 
         sectionTitle="Practical Skills"
         sectionSubtitle="I strive to incorporate new & emerging technologies to my tech stack"
@@ -49,7 +53,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </IntersectionObserverTarget>
   </section>
 </template>
 
@@ -75,30 +79,16 @@ export default {
         'Tailwind CSS',
         'Bootstrap'
       ],
-
-      observer: null
     }
   },
 
-  mounted() {
-    let options = { threshold: 1.0 }
-
-    this.observer = new IntersectionObserver(this.handleObserver, options);
-    this.observer.observe(this.$el);
-  },
-  
-  destroyed() {
-    this.observer.disconnect();
-  },
-
   methods: {
-    handleObserver(entries) {
-      entries.forEach(entry => {
+    handleIntersecting(entry, unobserve) {
         if (entry.isIntersecting) {
           this.isPlaceholderShown = false;
           this.isListShown = true;
+        unobserve();
         }
-      });
     }
   }
 }

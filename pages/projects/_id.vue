@@ -24,7 +24,12 @@
       </section>
     </ZoomIn>
 
-    <section class="container grid py-16 gap-y-8 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-16 xl:py-28 xl:text-lg">
+    <section>
+      <IntersectionObserverTarget
+        :threshold="1"
+        class="container grid py-16 gap-y-8 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-16 xl:py-28 xl:text-lg"
+        @on-intersecting="handleIntersecting"
+      >
       <div
         v-for="(value, index) in project.overview"
         :key="index"
@@ -39,6 +44,7 @@
           class="underline transition-colors duration-200 hover:text-tertiary"
         >{{ value }}</a>
       </div>
+      </IntersectionObserverTarget>
     </section>
 
     <!-- <section
@@ -109,7 +115,9 @@ export default {
       headerBackground: '',
       isSubtitleShown: false,
       isTitleShown: false,
-      projects: data.projects
+      projects: data.projects,
+      isOverviewIndexShown: false,
+      isOverviewValueShown: false
     };
   },
 
@@ -139,6 +147,13 @@ export default {
         this.headerBackground = this.project.thumbnails.desktop;
       } else {
         this.headerBackground = this.project.thumbnails.mobile;
+      }
+    },
+
+    handleIntersecting(entry, unobserve) {
+      if (entry.isIntersecting) {
+        this.isOverviewIndexShown = true;
+        unobserve();
       }
     },
 

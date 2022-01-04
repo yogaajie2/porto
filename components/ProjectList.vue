@@ -13,11 +13,15 @@
       />
     </div>
 
-    <div
+    <IntersectionObserverTarget
       v-if="this.$route.path != '/projects'"
-      class="mb-20 text-center lg:mb-10"
+      :threshold="1"
+      class="mb-14 text-center lg:mb-10"
+      @on-intersecting="handleIntersecting"
+    >
     >
       <NuxtLink
+          v-if="isViewAllProjectsShown"
         to="/projects"
         class="group items-center inline-flex text-tertiary font-heading font-bold uppercase lg:text-xl"
         @click.native="$nuxt.$emit('showTransition')"
@@ -25,7 +29,7 @@
         <span class="logo-on-hover hidden lg:block">//</span>
         <p class="shift-right-8 border-b border-tertiary translate-x-0">View all projects</p>
       </NuxtLink>
-    </div>
+    </IntersectionObserverTarget>
   </section>
 </template>
 
@@ -34,7 +38,10 @@ import data from "~/projects.json";
 
 export default {
   data() {
-    return { projects: data.projects }
+    return {
+      projects: data.projects,
+      isViewAllProjectsShown: false
+    }
   },
 
   computed: {
@@ -47,6 +54,13 @@ export default {
         return this.projects;
       } else {
         return this.projects.slice(0, 3);
+      }
+    },
+
+    handleIntersecting(entry, unobserve) {
+      if (entry.isIntersecting) {
+        this.isViewAllProjectsShown = true;
+        unobserve();
       }
     }
   }
