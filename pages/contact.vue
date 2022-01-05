@@ -23,8 +23,9 @@
       </p>
 
       <form
-        action=""
+        ref="form"
         class="mb-20 space-y-16 lg:mb-32 lg:space-y-32"
+        @submit.prevent="sendMessage"
       >
         <IntersectionObserverTarget
           :threshold="1"
@@ -35,6 +36,7 @@
             <input
               v-if="isInputNameShown"
               type="text"
+              name="sender_name"
               placeholder="What's your name?"
               class="bg-primary border-b px-4"
             />
@@ -49,6 +51,7 @@
             <input
               v-if="isInputEmailShown"
               type="email"
+              name="sender_email"
               placeholder="What's your email?"
               class="bg-primary border-b px-4"
             />
@@ -63,6 +66,7 @@
             <textarea
               v-if="isTextAreaShown"
               rows="5"
+              name="message"
               placeholder="Tell me more about the project"
               class="bg-primary border-b px-4 md:col-span-2"
             />
@@ -117,6 +121,8 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
   head: { titleTemplate: '%s | Contact' },
 
@@ -146,6 +152,10 @@ export default {
         this.isInputNameShown = true;
         unobserve();
       }
+    },
+
+    sendMessage() {
+      emailjs.sendForm('service_gmail', 'contact_form', this.$refs.form, 'user_aylLAfpR2ogk8G3sb61Zz');
     },
 
     handleIntersectingViewResume(entry, unobserve) {
