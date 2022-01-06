@@ -60,6 +60,7 @@ module.exports = {
       },
 
       animation: {
+        'blink': 'fade-in-out 200ms 5 alternate',
         'fade-in-out': 'fade-in-out 600ms infinite alternate'
       },
 
