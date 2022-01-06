@@ -39,27 +39,48 @@
         </a>
       </IntersectionObserverTarget>
     </section>
+
+    <transition
+      enter-class="opacity-0 translate-y-4"
+      enter-active-class="transition transform duration-500"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-class="opacity-100 translate-y-0"
+      leave-active-class="transition transform duration-3000"
+      leave-to-class="opacity-0"
+    >
+      <div
+        v-if="isToastMessageShown"
+        class="fixed w-screen bottom-12"
+      >
+        <div class="container">
+          <div class="rounded h-1/2 p-4 w-full text-center bg-primary-lightest shadow-xl lg:mx-auto lg:w-3/4">
+            <p class="mb-4 font-bold">{{ toastMessageStatus }}</p>
+            <p>{{ toastMessageContent }}<br>Thank you!</p>
+          </div>
+        </div>
+      </div>
+    </transition>
   </main>
 </template>
 
 <script>
-import emailjs from '@emailjs/browser';
-
 export default {
   head: { titleTemplate: '%s | Contact' },
 
   data() {
     return{
-      isInputNameShown: false,
-      isInputEmailShown: false,
-      isTextAreaShown: false,
-      isSendMessageButtonShown: false,
-      isViewResumeButtonShown: false
+      isViewResumeButtonShown: false,
+      isToastMessageShown: false,
+      toastMessageStatus: null,
+      toastMessageContent: null
     }
   },
 
   mounted() {
     this.$nuxt.$on('emitScrollToContactForm', this.scrollToContactForm);
+    this.$nuxt.$on('emitShowToastMessage', status => {
+      this.showToastMessage(status);
+    });
   },
 
   methods: {
@@ -69,15 +90,20 @@ export default {
       });
     },
 
-    handleIntersectingForm(entry, unobserve) {
-      if (entry.isIntersecting) {
-        this.isInputNameShown = true;
-        unobserve();
+    showToastMessage(status) {
+      if (status === 200) {
+        this.toastMessageStatus = 'Message sent!';
+        this.toastMessageContent = 'I will reply to your message soon.';
+      } else {
+        this.toastMessageStatus = 'Message not sent!';
+        this.toastMessageContent = 'Please try again soon.';
       }
-    },
 
-    sendMessage() {
-      emailjs.sendForm('service_gmail', 'contact_form', this.$refs.form, 'user_aylLAfpR2ogk8G3sb61Zz');
+      this.isToastMessageShown = true;
+
+      setTimeout(() => {
+        this.isToastMessageShown = false;
+      }, 3000);
     },
 
     handleIntersectingViewResume(entry, unobserve) {
