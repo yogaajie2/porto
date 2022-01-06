@@ -14,86 +14,8 @@
         sectionSubtitle="Hello! Let's talk about your new project"
       />
       
-      <p class="mb-8 lg:mb-16">
-        Fill in the form to contact me or send an email to
-        <a
-          href="mailto:yogaajie2@gmail.com"
-          class="font-bold underline"
-        >yogaajie2@gmail.com</a>
-      </p>
-
-      <form
-        ref="form"
-        class="mb-20 space-y-16 lg:mb-32 lg:space-y-32"
-        @submit.prevent="sendMessage"
-      >
-        <IntersectionObserverTarget
-          :threshold="1"
-          class="grid h-59 gap-y-8 md:grid-cols-2 md:gap-x-8 md:gap-y-16 lg:gap-y-32"
-          @on-intersecting="handleIntersectingForm"
-        >
-          <FadeIn @after-enter="isInputEmailShown = true">
-            <input
-              v-if="isInputNameShown"
-              type="text"
-              name="sender_name"
-              placeholder="What's your name?"
-              class="bg-primary border-b px-4"
-            />
-
-            <div
-              v-else
-              class="h-7"
-            />
-          </FadeIn>
-
-          <FadeIn @after-enter="isTextAreaShown = true">
-            <input
-              v-if="isInputEmailShown"
-              type="email"
-              name="sender_email"
-              placeholder="What's your email?"
-              class="bg-primary border-b px-4"
-            />
-
-            <div
-              v-else
-              class="h-7"
-            />
-          </FadeIn>
-
-          <FadeIn @after-enter="isSendMessageButtonShown = true">
-            <textarea
-              v-if="isTextAreaShown"
-              rows="5"
-              name="message"
-              placeholder="Tell me more about the project"
-              class="bg-primary border-b px-4 md:col-span-2"
-            />
-
-            <div
-              v-else
-              class="h-31"
-            />
-          </FadeIn>
-        </IntersectionObserverTarget>
-
-        <SlideRight>
-          <button
-            v-if="isSendMessageButtonShown"
-            class="cta group flex md:mx-auto"
-          >
-            <span class="logo-on-hover hidden lg:block">//</span>
-            <span class="shift-right-8 border-b border-tertiary translate-x-0">Send Message</span>
-          </button>
-
-          <div
-            v-else
-            class="h-6 lg:h-7"
-          />
-        </SlideRight>
-      </form>
-
+      <p class="mb-16 md:text-center lg:mb-16">Please fill in the form below to contact me</p>
+      <ContactForm />
       <p class="border-t mb-16 pt-4 md:pt-8 md:text-center lg:mb-8 lg:pt-16">Or click the button below to view my resume</p>
 
       <IntersectionObserverTarget
