@@ -19,7 +19,7 @@
           <SlideUp>
             <img
               v-if="isPhotoShown"
-              src="https://i.imgur.com/5ioqq3c.png"
+              src="https://i.imgur.com/ffHVIPH.png"
               class="md:mx-auto md:w-1/2 lg:w-auto xl:w-3/4"
             />
 
