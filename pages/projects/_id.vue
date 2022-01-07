@@ -75,7 +75,7 @@
             v-for="(screenshot, index) in project.screenshots"
             :key="index"
             :src="screenshot"
-            class="mx-auto md:h-96"
+            class="h-48 mx-auto md:h-64 lg:h-96"
           />
         </div>
       </div>
