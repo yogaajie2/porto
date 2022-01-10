@@ -11,7 +11,7 @@
         class="block"
         @click.native="$nuxt.$emit('showTransition')"
       >
-        <div class="h-43 mb-11 relative">
+        <div class="h-43 mb-11 relative lg:h-56">
           <img
             :src="project.thumbnails.desktop"
             class="rounded-lg w-10/12"
