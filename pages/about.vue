@@ -11,7 +11,7 @@
         sectionSubtitle="Hello, I am Yoga Prasetya"
       />
       
-      <div class="flex flex-col space-y-8 md:space-y-12 lg:flex-row lg:items-center lg:space-x-12 lg:space-y-0 xl:space-x-40">
+      <div class="flex flex-col space-y-8 md:space-y-12 lg:flex-row lg:items-center lg:justify-between lg:space-x-12 lg:space-y-0 xl:space-x-40">
         <IntersectionObserverTarget
           :threshold="1"
           @on-intersecting="handleIntersectingPhoto"
@@ -20,7 +20,7 @@
             <img
               v-show="isPhotoShown"
               src="https://i.imgur.com/ffHVIPH.png"
-              class="md:mx-auto md:w-1/2 lg:w-auto xl:w-3/4"
+              class="md:mx-auto md:w-1/2 lg:w-auto"
             />
 
             <!-- <Placeholder
