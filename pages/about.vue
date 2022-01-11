@@ -54,7 +54,7 @@
       </div>
     </section>
 
-    <Skills />
+    <!-- <Skills /> -->
     <KeyValues />
     <BottomQuestion />
   </main>

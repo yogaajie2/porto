@@ -6,7 +6,7 @@
     />
     
     <ProjectList />
-    <Skills />
+    <!-- <Skills /> -->
     <KeyValues />
     <BottomQuestion />
   </main>
