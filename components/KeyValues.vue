@@ -1,18 +1,20 @@
 <template>
-  <section class="bg-primary container py-12 text-secondary md:py-16 lg:py-20 xl:py-24">
-    <SectionTitle 
-      sectionTitle="Key Values"
-      sectionSubtitle="These are the key values I follow when I write or develop code"
-    />
-
-    <div class="grid text-center gap-16 lg:grid-cols-2 lg:gap-24">
-      <KeyValue
-        v-for="(value, index) in values"
-        :key="index"
-        :icon="value.icon"
-        :name="value.name"
-        :description="value.description"
+  <section class="bg-primary-light">
+    <div class="container py-12 md:py-16 lg:py-20 xl:py-24">
+      <SectionTitle 
+        sectionTitle="Key Values"
+        sectionSubtitle="These are the key values I follow when I write or develop code"
       />
+  
+      <div class="grid text-center gap-16 lg:grid-cols-2 lg:gap-24">
+        <KeyValue
+          v-for="(value, index) in values"
+          :key="index"
+          :icon="value.icon"
+          :name="value.name"
+          :description="value.description"
+        />
+      </div>
     </div>
   </section>
 </template>
