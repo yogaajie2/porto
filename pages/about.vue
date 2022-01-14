@@ -22,11 +22,6 @@
               src="https://i.imgur.com/ffHVIPH.png"
               class="md:mx-auto md:w-1/2 lg:w-auto"
             />
-
-            <!-- <Placeholder
-              v-else
-              class="h-78 md:h-80 lg:h-82 xl:h-88"
-            /> -->
           </SlideUp>
         </IntersectionObserverTarget>
 

@@ -11,36 +11,17 @@ module.exports = {
 
   theme: {
     extend: {
-      minHeight: {
-        '8': '2rem',
-        '12': '3rem',
-        '22': '5.5rem',
-        '23': '5.75rem',
-        '24': '6rem',
-        '40': '10rem',
-        '56': '14rem',
-        '72': '18rem',
-        '80': '20rem'
-      },
-      
       zIndex: {
         '-10': '-10'
       },
 
       spacing: {
         '22': '5.5rem',
-        '31': '7.75rem',
-        '34': '8.5rem',
         '38': '9.5rem',
-        '42': '10.5rem',
         '43': '10.75rem',
         '57': '14.25rem',
         '76': '19rem',
-        '78': '19.5rem',
         '81': '20.25rem',
-        '82': '20.5rem',
-        '83': '20.75rem',
-        '85': '21.25rem',
         '88': '22rem',
         '90': '22.5rem',
         '108': '27rem',
@@ -49,15 +30,6 @@ module.exports = {
 
       transitionDuration: {
         '3000': '3000ms',
-        '10000': '10000ms'
-      },
-
-      scale: {
-        '250': '2.5'
-      },
-
-      skew: {
-        '-8': '-8deg'
       },
 
       animation: {
@@ -94,10 +66,7 @@ module.exports = {
       },
 
       secondary: '#EAEBEB',
-      tertiary: '#B1FBD7',
-      black: '#000',
-      white: '#fff',
-      transparent: 'transparent'
+      tertiary: '#B1FBD7'
     },
 
     container: {

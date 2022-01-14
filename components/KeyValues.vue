@@ -34,7 +34,6 @@ export default {
           icon: 'shapes',
           name: 'Scalability',
           description: 'I believe code modularity and reusability is the future of web development. I often split my code into reusable components for improved scalability. Making it easier to maintain and faster to implement new features.'
-          // Maintaining a massively monolithic code base across teams and developers alike is a slow and complicated process. That's why I believe code modularity and reusability is the future of web development. I often split my code into reusable components for improved scalability. Making it easier to maintain and faster to implement new features.
         },
 
         {
