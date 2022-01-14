@@ -43,7 +43,7 @@
           </FadeIn>
 
           <FadeIn>
-            <p v-if="isFourthParagraphShown">I emphasize the use of subtle motions and animations in my projects to spice up static and dull UI/UX a little bit.</p>
+            <p v-if="isFourthParagraphShown">I emphasize the use of subtle motions and animations in my projects to spice up static UI/UX a little bit.</p>
           </FadeIn>
         </IntersectionObserverTarget>
       </div>

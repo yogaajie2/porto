@@ -3,7 +3,7 @@
     <div class="container py-12 md:py-16 lg:py-20 xl:py-24">
       <SectionTitle 
         sectionTitle="Key Values"
-        sectionSubtitle="These are the key values I follow when I write or develop code"
+        sectionSubtitle="These are the key values I follow when I write code"
       />
   
       <div class="grid text-center gap-16 lg:grid-cols-2 lg:gap-24">
@@ -39,7 +39,7 @@ export default {
         {
           icon: 'cogs',
           name: 'Compatibility',
-          description: 'Users nowadays use a wide variety of ways to access the web. That\'s why it is important for my code to run smoothly across different devices and browsers, old and new.'
+          description: 'Users nowadays use a wide variety of ways to access the web. That\'s why it is important for my code to run smoothly across different devices and browsers.'
         },
 
         {

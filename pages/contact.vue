@@ -96,7 +96,7 @@ export default {
         this.toastMessageContent = 'I will reply to your message soon.';
       } else {
         this.toastMessageStatus = 'Message not sent!';
-        this.toastMessageContent = 'Please try again soon.';
+        this.toastMessageContent = 'Please try again later.';
       }
 
       this.isToastMessageShown = true;
