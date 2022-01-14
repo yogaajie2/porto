@@ -61,14 +61,26 @@ module.exports = {
       },
 
       animation: {
+        'back-and-forth': 'back-and-forth 800ms ease-in-out infinite alternate',
         'blink': 'fade-in-out 200ms 5 alternate',
-        'fade-in-out': 'fade-in-out 600ms infinite alternate'
+        'fade-in-out': 'fade-in-out 600ms infinite alternate',
+        'up-and-down': 'up-and-down 800ms ease-in-out infinite alternate',
       },
 
       keyframes: {
+        'back-and-forth': {
+          'from': { transform: 'translate(0rem)' },
+          'to': { transform: 'translate(0.5rem)' }
+        },
+
         'fade-in-out': {
           'from': { opacity: '0' },
           'to': { opacity: '1' }
+        },
+
+        'up-and-down': {
+          'from': { transform: 'translate(0rem, 0rem)' },
+          'to': { transform: 'translate(0rem, -0.5rem)' }
         }
       }
     },

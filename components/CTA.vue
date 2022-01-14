@@ -12,7 +12,7 @@
   
       <font-awesome-icon
         :icon="['fas', 'arrow-down']"
-        class="up-and-down"
+        class="animate-up-and-down"
       />
     </div>
   </a>
@@ -30,7 +30,7 @@
   
       <font-awesome-icon
         :icon="['fas', 'arrow-right']"
-        class="back-and-forth"
+        class="animate-back-and-forth"
       />
     </div>
   </NuxtLink>
