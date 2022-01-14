@@ -66,7 +66,7 @@
       </IntersectionObserverTarget>
     </section>
 
-    <section class="py-8 bg-secondary text-primary xl:py-12">
+    <section class="py-8 bg-primary-light xl:py-12">
       <div class="container">
         <h2 class="mb-8 font-heading text-center xl:mb-12">Gallery</h2>
 

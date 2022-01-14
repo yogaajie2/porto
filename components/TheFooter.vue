@@ -1,6 +1,6 @@
 <template>
   <footer>    
-    <section class="text-primary bg-secondary md:px-16 lg:px-24 xl:px-32">
+    <section class="bg-primary-lightest md:px-16 lg:px-24 xl:px-32">
       <div class="container flex flex-col justify-center py-4 space-y-4">
         <nav class="flex justify-center text-xl">
           <a
