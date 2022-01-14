@@ -36,7 +36,7 @@
       <IntersectionObserverTarget
         :threshold="1"
         class="container grid py-16 gap-y-8 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-16 xl:py-28 xl:text-lg"
-        @on-intersecting="handleIntersecting"
+        @on-intersecting="handleIntersectingOverview"
       >
         <div
           v-for="(value, index) in project.overview"
@@ -81,7 +81,7 @@
       </div>
     </section>
 
-    <section class="container py-24">
+    <section class="container h-85 py-24">
       <h3>Next Project:</h3>
 
       <NuxtLink
@@ -93,12 +93,21 @@
         <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">{{ nextProject.title }}</h2>
       </NuxtLink>
 
-      <NuxtLink
-        to="/projects"
-        @click.native="$nuxt.$emit('showTransition')"
+      <IntersectionObserverTarget
+        :threshold="1"
+        @on-intersecting="handleIntersectingBackToAllProjects"
       >
-        <p class="font-heading font-bold text-xl underline transition-colors duration-200 hover:text-tertiary">Back to all projects</p>
-      </NuxtLink>
+        <SlideRight>
+          <NuxtLink
+            v-if="isBackToAllProjectsShown"
+            to="/projects"
+            class="block"
+            @click.native="$nuxt.$emit('showTransition')"
+          >
+            <p class="font-heading font-bold text-xl underline transition-colors duration-200 hover:text-tertiary">Back to all projects</p>
+          </NuxtLink>
+        </SlideRight>
+      </IntersectionObserverTarget>
     </section>
 
     <BottomQuestion />
@@ -121,7 +130,8 @@ export default {
       isTitleShown: false,
       projects: data.projects,
       isOverviewIndexShown: false,
-      isOverviewValueShown: false
+      isOverviewValueShown: false,
+      isBackToAllProjectsShown: false
     };
   },
 
@@ -154,9 +164,16 @@ export default {
       }
     },
 
-    handleIntersecting(entry, unobserve) {
+    handleIntersectingOverview(entry, unobserve) {
       if (entry.isIntersecting) {
         this.isOverviewIndexShown = true;
+        unobserve();
+      }
+    },
+
+    handleIntersectingBackToAllProjects(entry, unobserve) {
+      if (entry.isIntersecting) {
+        this.isBackToAllProjectsShown = true;
         unobserve();
       }
     },
