@@ -69,7 +69,7 @@
       </div>
     </section>
 
-    <!-- <Skills /> -->
+    <!-- <SkillsSection /> -->
     <KeyValues />
     <BottomQuestion />
   </main>

@@ -6,7 +6,7 @@
     />
     
     <div class="lg:flex lg:flex-wrap lg:justify-between lg:mb-16">
-      <Project
+      <ProjectItem
         v-for="(project, index) in projectsLimited"
         :key="index"
         :project="project"
