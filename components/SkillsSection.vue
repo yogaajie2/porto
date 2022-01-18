@@ -10,7 +10,7 @@
         section-subtitle="I strive to incorporate new & emerging technologies to my tech stack"
       />
 
-      <div class="lg:flex lg:items-end lg:justify-between">
+      <div>
         <div
           v-show="isPlaceholderShown"
           class="h-40"
@@ -18,7 +18,7 @@
 
         <div
           v-show="isListShown"
-          class="flex justify-between mb-12 md:mb-20 lg:flex-col lg:mb-0 lg:space-y-8"
+          class="grid mb-12 grid-cols-2 gap-8 md:mb-20 md:grid-cols-3 lg:mt-40 lg:gap-14 xl:mt-60 xl:gap-24"
         >
           <div>
             <p class="font-bold mb-2 lg:text-2xl">
@@ -40,7 +40,7 @@
             </transition-group>
           </div>
 
-          <div class="md:text-right lg:text-left">
+          <div class="lg:text-left">
             <p class="font-bold mb-2 lg:text-2xl">
               Frameworks
             </p>
@@ -56,6 +56,26 @@
                 :key="framework"
               >
                 {{ framework }}
+              </p>
+            </transition-group>
+          </div>
+
+          <div class="lg:text-left">
+            <p class="font-bold mb-2 lg:text-2xl">
+              Design
+            </p>
+            
+            <transition-group
+              enter-class="opacity-0 translate-y-4"
+              enter-active-class="transition transform duration-500 delay-300"
+              enter-to-class="opacity-100 translate-y-0"
+            >
+              <p
+                v-for="design in designs"
+                v-show="isListShown"
+                :key="design"
+              >
+                {{ design }}
               </p>
             </transition-group>
           </div>
@@ -86,6 +106,11 @@ export default {
         'Laravel',
         'Tailwind CSS',
         'Bootstrap'
+      ],
+
+      designs: [
+        'Photoshop',
+        'Illustrator'
       ],
     }
   },
