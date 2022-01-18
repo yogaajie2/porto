@@ -1,8 +1,8 @@
 <template>
-  <section class="bg-secondary">
+  <section class="bg-primary-light">
     <IntersectionObserverTarget
       :threshold="1"
-      class="container py-12 text-primary"
+      class="container py-12"
       @on-intersecting="handleIntersecting"
     >
       <SectionTitle 
