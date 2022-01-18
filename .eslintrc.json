@@ -18,5 +18,13 @@
         "vue"
     ],
     "rules": {
+      "vue/multi-word-component-names": ["error", {
+        "ignores": [
+          "about",
+          "contact",
+          "default",
+          "index"
+        ]
+      }]
     }
 }
