@@ -14,7 +14,7 @@
     </div>
     
     <IntersectionObserverTarget
-      v-if="this.$route.path != '/projects'"
+      v-if="!isInProjectsRoute"
       :threshold="1"
       class="mb-14 text-center lg:mb-10"
       @on-intersecting="handleIntersecting"
@@ -53,16 +53,28 @@ export default {
 
   computed: {
     projectsLimited() {
-      return this.checkRoutePath();
+      return this.showProjects();
+    },
+
+    isInProjectsRoute() {
+      return this.checkProjectRoute();
     }
   },
 
   methods: {
-    checkRoutePath() {
+    showProjects() {
       if (this.$route.path == '/projects') {
         return this.projects;
       } else {
         return this.projects.slice(0, 3);
+      }
+    },
+
+    checkProjectRoute() {
+      if (this.$route.path === '/projects') {
+        return true;
+      } else {
+        return false;
       }
     },
 
