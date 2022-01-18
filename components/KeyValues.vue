@@ -2,8 +2,8 @@
   <section class="bg-primary-light">
     <div class="container py-12 md:py-16 lg:py-20 xl:py-24">
       <SectionTitle 
-        sectionTitle="Key Values"
-        sectionSubtitle="These are the key values I follow when I write code"
+        section-title="Key Values"
+        section-subtitle="These are the key values I follow when I write code"
       />
   
       <div class="grid text-center gap-16 lg:grid-cols-2 lg:gap-24">

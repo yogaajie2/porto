@@ -1,14 +1,14 @@
 <template>
   <main>
     <PageHeader
-      pageSubtitle="Fast learning and highly adaptable."
-      pageTitle="Always curious, constantly learning."
+      page-subtitle="Fast learning and highly adaptable."
+      page-title="Always curious, constantly learning."
     />
 
     <section class="container py-12 lg:py-20 xl:py-24">
       <SectionTitle 
-        sectionTitle="About me"
-        sectionSubtitle="Hello, I am Yoga Prasetya"
+        section-title="About me"
+        section-subtitle="Hello, I am Yoga Prasetya"
       />
       
       <div class="flex flex-col space-y-8 md:space-y-12 lg:flex-row lg:items-center lg:justify-between lg:space-x-12 lg:space-y-0 xl:space-x-40">
@@ -21,7 +21,7 @@
               v-show="isPhotoShown"
               src="https://i.imgur.com/ffHVIPH.png"
               class="md:mx-auto md:w-1/2 lg:w-auto"
-            />
+            >
           </SlideUp>
         </IntersectionObserverTarget>
 
@@ -31,19 +31,39 @@
           @on-intersecting="handleIntersectingAbout"
         >
           <FadeIn @after-enter="isSecondParagraphShown = true">
-            <p v-if="isFirstParagraphShown">I am a front-end developer based in the Greater Jakarta Area, Indonesia where I have been working for more than 2 years.</p>
+            <p v-if="isFirstParagraphShown">
+              I am a front-end developer based in the Greater Jakarta Area, Indonesia where I have been working for more than 2 years.
+            </p>
           </FadeIn>
           
           <FadeIn @after-enter="isThirdParagraphShown = true">
-            <p v-if="isSecondParagraphShown">I have worked on projects both personally and together in teams, and I consider every project as an opportunity to learn, collaborate, and further improve my skills.</p>
+            <p v-if="isSecondParagraphShown">
+              I have worked on projects both personally and together in teams, and I consider every project as an opportunity to learn, collaborate, and further improve my skills.
+            </p>
           </FadeIn>
 
           <FadeIn @after-enter="isFourthParagraphShown = true">
-            <p v-if="isThirdParagraphShown">I primarily use <a href="https://vuejs.org/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Vue.js</a> together with <a href="https://nuxtjs.org/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Nuxt.js</a> as the go-to framework. I also prefer using <a href="https://tailwindcss.com/" target="_blank" class="underline transition-colors duration-200 hover:text-tertiary">Tailwind CSS</a> to help maintain my design systems.</p>
+            <p v-if="isThirdParagraphShown">
+              I primarily use <a
+                href="https://vuejs.org/"
+                target="_blank"
+                class="underline transition-colors duration-200 hover:text-tertiary"
+              >Vue.js</a> together with <a
+                href="https://nuxtjs.org/"
+                target="_blank"
+                class="underline transition-colors duration-200 hover:text-tertiary"
+              >Nuxt.js</a> as the go-to framework. I also prefer using <a
+                href="https://tailwindcss.com/"
+                target="_blank"
+                class="underline transition-colors duration-200 hover:text-tertiary"
+              >Tailwind CSS</a> to help maintain my design systems.
+            </p>
           </FadeIn>
 
           <FadeIn>
-            <p v-if="isFourthParagraphShown">I emphasize the use of subtle motions and animations in my projects to spice up static UI/UX a little bit.</p>
+            <p v-if="isFourthParagraphShown">
+              I emphasize the use of subtle motions and animations in my projects to spice up static UI/UX a little bit.
+            </p>
           </FadeIn>
         </IntersectionObserverTarget>
       </div>
@@ -57,8 +77,6 @@
 
 <script>
 export default {
-  head: { titleTemplate: '%s | About' },
-
   data() {
     return {
       isPhotoShown: false,
@@ -68,6 +86,8 @@ export default {
       isFourthParagraphShown: false
     }
   },
+
+  head: { titleTemplate: '%s | About' },
 
   methods: {
     handleIntersectingPhoto(entry, unobserve) {

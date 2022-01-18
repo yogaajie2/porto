@@ -5,6 +5,6 @@
     enter-to-class="opacity-100 translate-y-0"
     v-on="$listeners"
   >
-    <slot></slot>
+    <slot />
   </transition>  
 </template>

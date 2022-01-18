@@ -1,8 +1,8 @@
 <template>
   <main>
     <PageHeader
-      pageSubtitle="Let's work and collaborate together."
-      pageTitle="Have an interesting project in mind?"
+      page-subtitle="Let's work and collaborate together."
+      page-title="Have an interesting project in mind?"
     />
 
     <section
@@ -10,13 +10,19 @@
       class="container py-12 md:py-20"
     >
       <SectionTitle 
-        sectionTitle="Let's talk"
-        sectionSubtitle="Hello! Let's talk about your new project"
+        section-title="Let's talk"
+        section-subtitle="Hello! Let's talk about your new project"
       />
       
-      <p class="mb-16 md:text-center lg:mb-16">Please fill in the form below to contact me</p>
+      <p class="mb-16 md:text-center lg:mb-16">
+        Please fill in the form below to contact me
+      </p>
+
       <ContactForm />
-      <p class="border-t mb-16 pt-4 md:pt-8 md:text-center lg:mb-8 lg:pt-16">Or click the button below to view my resume</p>
+
+      <p class="border-t mb-16 pt-4 md:pt-8 md:text-center lg:mb-8 lg:pt-16">
+        Or click the button below to view my resume
+      </p>
 
       <IntersectionObserverTarget
         :threshold="1"
@@ -54,7 +60,9 @@
       >
         <div class="container">
           <div class="rounded h-1/2 p-4 w-full text-center bg-primary-lightest shadow-xl lg:mx-auto lg:w-3/4">
-            <p class="mb-4 font-bold">{{ toastMessageStatus }}</p>
+            <p class="mb-4 font-bold">
+              {{ toastMessageStatus }}
+            </p>
             <p>{{ toastMessageContent }}<br>Thank you!</p>
           </div>
         </div>
@@ -65,8 +73,6 @@
 
 <script>
 export default {
-  head: { titleTemplate: '%s | Contact' },
-
   data() {
     return{
       isViewResumeButtonShown: false,
@@ -75,6 +81,8 @@ export default {
       toastMessageContent: null
     }
   },
+
+  head: { titleTemplate: '%s | Contact' },
 
   mounted() {
     this.$nuxt.$on('emitScrollToContactForm', this.scrollToContactForm);

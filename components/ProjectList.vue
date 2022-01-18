@@ -1,8 +1,8 @@
 <template>
   <section class="bg-primary container py-12 text-secondary">
     <SectionTitle 
-      sectionTitle="Work Portfolio"
-      sectionSubtitle="Featured Projects"
+      section-title="Work Portfolio"
+      section-subtitle="Featured Projects"
     />
     
     <div class="lg:flex lg:flex-wrap lg:justify-between lg:mb-16">
@@ -31,7 +31,9 @@
           @click.native="$nuxt.$emit('showTransition')"
         >
           <span class="logo-on-hover hidden lg:block">//</span>
-          <p class="shift-right-8 border-b border-tertiary translate-x-0">View all projects</p>
+          <p class="shift-right-8 border-b border-tertiary translate-x-0">
+            View all projects
+          </p>
         </NuxtLink>
       </transition>
     </IntersectionObserverTarget>

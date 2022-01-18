@@ -12,4 +12,5 @@ config.autoAddCss = false
 library.add(faAngleDoubleRight, faArrowRight, faArrowDown, faBalanceScale, faCogs, faShapes, faTachometerAlt, faGithub, faInstagram, faLinkedin)
 
 // Register the component globally
+// eslint-disable-next-line vue/component-definition-name-casing
 Vue.component('font-awesome-icon', FontAwesomeIcon)

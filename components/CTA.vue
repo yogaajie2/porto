@@ -20,13 +20,15 @@
   <NuxtLink
     v-else
     to="/contact"
-    @click.native="$nuxt.$emit('showTransition')"
     class="cta group items-center inline-flex lg:text-xl xl:text-2xl"
+    @click.native="$nuxt.$emit('showTransition')"
   >
     <span class="logo-on-hover">//</span>
 
     <div class="shift-right-8 flex items-center">
-      <p class="mr-4">Let's Work Together</p>
+      <p class="mr-4">
+        Let's Work Together
+      </p>
   
       <font-awesome-icon
         :icon="['fas', 'arrow-right']"

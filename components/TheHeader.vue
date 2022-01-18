@@ -6,8 +6,8 @@
     @after-enter="isLogoShown = true"
   >
     <header
-      class="bg-primary-lighter fixed text-tertiary top-0 w-screen z-10 transition-transform duration-300 ease-in-out transform"
       v-show="isHeaderShown"
+      class="bg-primary-lighter fixed text-tertiary top-0 w-screen z-10 transition-transform duration-300 ease-in-out transform"
       :class="{ '-translate-y-full': isScrolledDown }"
     >
       <div class="flex h-20 items-center justify-between container py-4">
@@ -35,8 +35,8 @@
             @after-enter="isMenuIconShown = true"
           >
             <span
-              class="inline-block"
               v-show="isBrandShown"
+              class="inline-block"
             >Momentum</span>
           </transition>
         </NuxtLink>
@@ -47,19 +47,19 @@
           enter-to-class="opacity-100 -translate-x-0"
         >
           <div
-            class="menu-icon inline-block lg:hidden"
             v-show="isMenuIconShown"
+            class="menu-icon inline-block lg:hidden"
             @click="toggleMenu"
           >
             <input
               class="menu-icon__cheeckbox"
               type="checkbox"
               :checked="isMenuIconChecked"
-            />
+            >
             
             <div>
-              <span></span>
-              <span></span>
+              <span />
+              <span />
             </div>
           </div>
         </transition>

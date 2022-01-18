@@ -18,7 +18,9 @@
           <p
             v-show="isInputNameErrorShown"
             class="absolute -top-full text-xs animate-blink"
-          >Please enter your name</p>
+          >
+            Please enter your name
+          </p>
 
           <input
             v-model.lazy.trim="senderName"
@@ -27,7 +29,7 @@
             placeholder="What's your name?"
             class="border-b h-full px-4 w-full bg-primary"
             @change="isInputNameErrorShown = false"
-          />
+          >
         </div>
 
         <Placeholder
@@ -45,7 +47,9 @@
           <p
             v-show="isInputEmailErrorShown"
             class="absolute -top-full text-xs animate-blink"
-          >{{ emailError }}</p>
+          >
+            {{ emailError }}
+          </p>
 
           <input
             v-model.lazy.trim="senderEmail"
@@ -54,7 +58,7 @@
             placeholder="What's your email?"
             class="border-b h-full px-4 w-full bg-primary"
             @change="isInputEmailErrorShown = false"
-          />
+          >
         </div>
 
         <Placeholder
@@ -72,7 +76,9 @@
           <p
             v-show="isTextAreaErrorShown"
             class="absolute -top-6 text-xs animate-blink"
-          >Please enter a message</p>
+          >
+            Please enter a message
+          </p>
 
           <textarea
             v-model.lazy.trim="message"
@@ -81,7 +87,7 @@
             placeholder="Tell me more about the project"
             class="border-b h-full px-4 w-full bg-primary"
             @change="isTextAreaErrorShown = false"
-          ></textarea>
+          />
         </div>
 
         <Placeholder

@@ -4,6 +4,6 @@
     enter-active-class="transition transform duration-500"
     enter-to-class="opacity-100 -translate-x-0"
   >
-    <slot></slot>
+    <slot />
   </transition>
 </template>

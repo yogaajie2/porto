@@ -6,22 +6,24 @@
       @on-intersecting="handleIntersecting"
     >
       <SectionTitle 
-        sectionTitle="Practical Skills"
-        sectionSubtitle="I strive to incorporate new & emerging technologies to my tech stack"
+        section-title="Practical Skills"
+        section-subtitle="I strive to incorporate new & emerging technologies to my tech stack"
       />
 
       <div class="lg:flex lg:items-end lg:justify-between">
         <div
           v-show="isPlaceholderShown"
           class="h-40"
-        ></div>
+        />
 
         <div
           v-show="isListShown"
           class="flex justify-between mb-12 md:mb-20 lg:flex-col lg:mb-0 lg:space-y-8"
         >
           <div>
-            <p class="font-bold mb-2 lg:text-2xl">Tools & Languages</p>
+            <p class="font-bold mb-2 lg:text-2xl">
+              Tools & Languages
+            </p>
             
             <transition-group
               enter-class="opacity-0 translate-y-4"
@@ -32,12 +34,16 @@
                 v-for="language in languages"
                 v-show="isListShown"
                 :key="language"
-              >{{ language }}</p>
+              >
+                {{ language }}
+              </p>
             </transition-group>
           </div>
 
           <div class="md:text-right lg:text-left">
-            <p class="font-bold mb-2 lg:text-2xl">Frameworks</p>
+            <p class="font-bold mb-2 lg:text-2xl">
+              Frameworks
+            </p>
             
             <transition-group
               enter-class="opacity-0 translate-y-4"
@@ -48,7 +54,9 @@
                 v-for="framework in frameworks"
                 v-show="isListShown"
                 :key="framework"
-              >{{ framework }}</p>
+              >
+                {{ framework }}
+              </p>
             </transition-group>
           </div>
         </div>

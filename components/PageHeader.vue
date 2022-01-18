@@ -9,13 +9,17 @@
         <div class="container h-screen space-y-8">
           <FadeIn @after-enter="isTitleShown = true">
             <h3
-              class="text-gray-400"
               v-if="isSubtitleShown"
-            >{{ pageSubtitle }}</h3>
+              class="text-gray-400"
+            >
+              {{ pageSubtitle }}
+            </h3>
           </FadeIn>
           
           <SlideUp @after-enter="isCTAShown = true">
-            <h1 v-if="isTitleShown">{{ pageTitle }}</h1>
+            <h1 v-if="isTitleShown">
+              {{ pageTitle }}
+            </h1>
           </SlideUp>
   
           <SlideRight>

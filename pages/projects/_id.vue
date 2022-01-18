@@ -10,16 +10,20 @@
           <img
             :src="headerBackground"
             class="h-screen w-screen filter blur lg:mx-auto lg:w-auto"
-          />
+          >
   
           <div class="absolute bottom-0 w-full bg-primary bg-opacity-40">
             <div class="container h-60 py-16 space-y-4 text-secondary md:h-64 lg:h-80">
               <SlideUp @after-enter="isSubtitleShown = true">
-                <h1 v-show="isTitleShown">{{ project.title }}</h1>
+                <h1 v-show="isTitleShown">
+                  {{ project.title }}
+                </h1>
               </SlideUp>
               
               <FadeIn>
-                <h4 v-show="isSubtitleShown">{{ project.subtitle }}</h4>
+                <h4 v-show="isSubtitleShown">
+                  {{ project.subtitle }}
+                </h4>
               </FadeIn>
             </div>
           </div>
@@ -47,12 +51,16 @@
             <h6
               v-if="isOverviewIndexShown"
               class="mb-2"
-            >{{ index }}</h6>
+            >
+              {{ index }}
+            </h6>
           </SlideUp>
 
           <FadeIn>
             <div v-if="isOverviewValueShown">
-              <p v-if="index != 'address'">{{ value }}</p>
+              <p v-if="index != 'address'">
+                {{ value }}
+              </p>
       
               <a
                 v-else
@@ -68,7 +76,9 @@
 
     <section class="py-8 bg-primary-light xl:py-12">
       <div class="container">
-        <h2 class="mb-8 font-heading text-center xl:mb-12">Gallery</h2>
+        <h2 class="mb-8 font-heading text-center xl:mb-12">
+          Gallery
+        </h2>
 
         <div class="space-y-8">
           <img
@@ -76,7 +86,7 @@
             :key="index"
             :src="screenshot"
             class="h-48 mx-auto md:h-64 lg:h-96"
-          />
+          >
         </div>
       </div>
     </section>
@@ -90,7 +100,9 @@
         @click.native="$nuxt.$emit('showTransition')"
       >
         <span class="logo-on-hover hidden lg:block lg:text-4xl xl:text-5xl">//</span>
-        <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">{{ nextProject.title }}</h2>
+        <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">
+          {{ nextProject.title }}
+        </h2>
       </NuxtLink>
 
       <IntersectionObserverTarget
@@ -104,7 +116,9 @@
             class="block"
             @click.native="$nuxt.$emit('showTransition')"
           >
-            <p class="font-heading font-bold text-xl underline transition-colors duration-200 hover:text-tertiary">Back to all projects</p>
+            <p class="font-heading font-bold text-xl underline transition-colors duration-200 hover:text-tertiary">
+              Back to all projects
+            </p>
           </NuxtLink>
         </SlideRight>
       </IntersectionObserverTarget>
@@ -118,9 +132,6 @@
 import data from "~/projects.json";
 
 export default {
-  head() {
-    return { titleTemplate: '%s | ' + this.project.title + ' Project' };
-  },
 
   data() {
     return {
@@ -133,6 +144,9 @@ export default {
       isOverviewValueShown: false,
       isBackToAllProjectsShown: false
     };
+  },
+  head() {
+    return { titleTemplate: '%s | ' + this.project.title + ' Project' };
   },
 
   computed: {

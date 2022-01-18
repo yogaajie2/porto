@@ -1,8 +1,8 @@
 <template>
   <div>
     <div
-      class="fixed flex h-screen top-0 w-screen z-20"
       v-show="isStillRevealing"
+      class="fixed flex h-screen top-0 w-screen z-20"
     >
       <transition
         name="reveal-left"
@@ -11,22 +11,22 @@
         @after-leave="isStillRevealing = false"
       >
         <div
-          class="curtain-left bg-primary-lightest w-full"
           v-show="isRevealed"
-        ></div>
+          class="curtain-left bg-primary-lightest w-full"
+        />
       </transition>
 
       <transition name="reveal-right">
         <div
-          class="curtain-right bg-primary-lightest w-full"
           v-show="isRevealed"
-        ></div>
+          class="curtain-right bg-primary-lightest w-full"
+        />
       </transition>
     </div>
 
     <div
-      class="fixed flex h-screen items-center justify-center top-0 w-screen z-20"
       v-show="isFirstLoad"
+      class="fixed flex h-screen items-center justify-center top-0 w-screen z-20"
     >
       <span class="animate-fade-in-out font-heading text-5xl text-tertiary md:text-6xl xl:text-7xl">//</span>
     </div>

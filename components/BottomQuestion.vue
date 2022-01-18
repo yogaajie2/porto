@@ -10,7 +10,9 @@
           <h2
             v-if="isQuestionShown"
             class="mb-8 lg:mb-16 xl:mb-20"
-          >Have a project?</h2>
+          >
+            Have a project?
+          </h2>
         </SlideUp>
 
         <SlideRight>

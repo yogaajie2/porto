@@ -21,14 +21,18 @@
     >
       <h5
         v-if="isNameShown"
-        class="mb-8 lg:text-3xl xl:text-4xl">{{ name }}
+        class="mb-8 lg:text-3xl xl:text-4xl"
+      >
+        {{ name }}
       </h5>
     </transition>
     
     <FadeIn>
       <p
         v-if="isDescriptionShown"
-        class="leading-loose text-gray-500 lg:leading-8 lg:text-lg xl:text-xl">{{ description }}
+        class="leading-loose text-gray-500 lg:leading-8 lg:text-lg xl:text-xl"
+      >
+        {{ description }}
       </p>
     </FadeIn>
   </IntersectionObserverTarget>
@@ -36,11 +40,22 @@
 
 <script>
 export default {
-  props: [
-    'icon',
-    'name',
-    'description'
-  ],
+  props: {
+    icon: {
+      type: String,
+      required: true
+    },
+
+    name: {
+      type: String,
+      required: true
+    },
+
+    description: {
+      type: String,
+      required: true
+    }
+  },
 
   data() {
     return {

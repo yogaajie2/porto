@@ -1,8 +1,8 @@
 <template>
   <main>
     <PageHeader
-      pageSubtitle="Personal or together in teams."
-      pageTitle="Every project a new opportunity."
+      page-subtitle="Personal or together in teams."
+      page-title="Every project a new opportunity."
     />
 
     <ProjectList />

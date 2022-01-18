@@ -1,7 +1,11 @@
 <template>
   <div>
-    <h3 class="mb-4">{{ sectionTitle }}</h3>
-    <h2 class="mb-20">{{ sectionSubtitle }}</h2>
+    <h3 class="mb-4">
+      {{ sectionTitle }}
+    </h3>
+    <h2 class="mb-20">
+      {{ sectionSubtitle }}
+    </h2>
   </div>
 </template>
 
