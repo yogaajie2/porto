@@ -99,8 +99,8 @@
         class="group flex items-center mb-16 font-heading text-tertiary"
         @click.native="$nuxt.$emit('showTransition')"
       >
-        <span class="logo-on-hover hidden lg:block lg:text-4xl xl:text-5xl">//</span>
-        <h2 class="shift-right-16 font-bold translate-x-0 lg:font-normal">
+        <span class="logo-on-hover hidden lg:block lg:text-3xl xl:text-4xl">//</span>
+        <h2 class="shift-right-12 font-bold translate-x-0 lg:font-normal">
           {{ nextProject.title }}
         </h2>
       </NuxtLink>
