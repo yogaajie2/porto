@@ -34,6 +34,7 @@
                 v-for="language in languages"
                 v-show="isListShown"
                 :key="language"
+                class="lg:text-lg xl:text-xl"
               >
                 {{ language }}
               </p>
@@ -54,6 +55,7 @@
                 v-for="framework in frameworks"
                 v-show="isListShown"
                 :key="framework"
+                class="lg:text-lg xl:text-xl"
               >
                 {{ framework }}
               </p>
@@ -74,6 +76,7 @@
                 v-for="design in designs"
                 v-show="isListShown"
                 :key="design"
+                class="lg:text-lg xl:text-xl"
               >
                 {{ design }}
               </p>
