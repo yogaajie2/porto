@@ -52,7 +52,7 @@
             @click="toggleMenu"
           >
             <input
-              class="menu-icon__cheeckbox"
+              class="menu-icon__checkbox"
               type="checkbox"
               :checked="isMenuIconChecked"
             >
@@ -131,7 +131,7 @@ export default {
 	height: 50px;
 	cursor: pointer;
 
-	.menu-icon__cheeckbox {
+	.menu-icon__checkbox {
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -169,7 +169,7 @@ export default {
 		}
 	}
 	&.active,
-	.menu-icon__cheeckbox:checked + div {
+	.menu-icon__checkbox:checked + div {
 		span {
 			&:first-of-type {
 				transform: rotate(45deg);
@@ -184,8 +184,8 @@ export default {
 
 	&.active:hover span:first-of-type,
 	&.active:hover span:last-of-type,
-	&:hover .menu-icon__cheeckbox:checked + div span:first-of-type,
-	&:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
+	&:hover .menu-icon__checkbox:checked + div span:first-of-type,
+	&:hover .menu-icon__checkbox:checked + div span:last-of-type {
 		width: 22px;
 	}
 
