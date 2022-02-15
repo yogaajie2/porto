@@ -27,6 +27,7 @@
     "fibers": "^5.0.0",
     "postcss": "^8.3.5",
     "sass": "^1.39.0",
-    "sass-loader": "^10.2.0"
+    "sass-loader": "^10.2.0",
+    "start-server-and-test": "^1.14.0"
   }
 }
