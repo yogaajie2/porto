@@ -9,8 +9,8 @@
     "generate": "nuxt generate",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test:start": "start-server-and-test start http://192.168.1.21:8000 cy:run",
-    "test:dev": "start-server-and-test dev http://192.168.1.21:8000 cy:open"
+    "test:start": "start-server-and-test start http://0.0.0.0:8000 cy:run",
+    "test:dev": "start-server-and-test dev http://0.0.0.0:8000 cy:open"
   },
   "dependencies": {
     "@emailjs/browser": "^3.3.1",
