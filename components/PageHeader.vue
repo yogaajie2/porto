@@ -5,19 +5,24 @@
         v-if="isContentShown"
         key="content"
         class="h-screen pt-40 bg-primary-light md:pt-60"
+        data-cy="page-header"
       >
         <div class="container h-screen space-y-8">
           <FadeIn @after-enter="isTitleShown = true">
             <h3
               v-if="isSubtitleShown"
               class="text-gray-400"
+              data-cy="page-subtitle"
             >
               {{ pageSubtitle }}
             </h3>
           </FadeIn>
           
           <SlideUp @after-enter="isCTAShown = true">
-            <h1 v-if="isTitleShown">
+            <h1
+              v-if="isTitleShown"
+              data-cy="page-title"
+            >
               {{ pageTitle }}
             </h1>
           </SlideUp>

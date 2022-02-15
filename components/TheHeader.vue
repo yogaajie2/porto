@@ -25,6 +25,7 @@
             <span
               v-show="isLogoShown"
               class="mr-2 lg:group-hover:animate-fade-in-out"
+              data-cy="logo"
             >//</span>
           </transition>
 
@@ -37,6 +38,7 @@
             <span
               v-show="isBrandShown"
               class="inline-block"
+              data-cy="brand"
             >Momentum</span>
           </transition>
         </NuxtLink>
