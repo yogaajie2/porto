@@ -2,7 +2,7 @@ const devices = ['iphone-x', 'ipad-mini', 'macbook-11']
 
 describe('First Load', () => {
   devices.forEach(device => {
-    it('Runs all animations on first load properly and in order', () => {
+    it('Runs all animations on first load properly and in order on ' + device + ' viewport', () => {
       cy.viewport(device)
 
       cy.visit('/')
