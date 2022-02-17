@@ -2,6 +2,7 @@
   <IntersectionObserverTarget
     :threshold="1"
     class="group mb-20 lg:w-5/12"
+    data-cy="project-wrapper"
     @on-intersecting="handleIntersecting"
   >
     <SlideUp>
@@ -9,6 +10,7 @@
         v-if="isProjectShown"
         :to="`projects/${ project.id }`"
         class="block"
+        data-cy="project"
         @click.native="$nuxt.$emit('showTransition')"
       >
         <div class="h-43 mb-11 relative lg:h-56">

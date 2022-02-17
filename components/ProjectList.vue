@@ -28,6 +28,7 @@
           v-if="isViewAllProjectsShown"
           to="/projects"
           class="group items-center inline-flex text-tertiary font-heading font-bold uppercase lg:text-xl"
+          data-cy="view-all-projects"
           @click.native="$nuxt.$emit('showTransition')"
         >
           <span class="logo-on-hover hidden lg:block">//</span>
