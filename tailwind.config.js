@@ -60,15 +60,10 @@ module.exports = {
     },
 
     colors: {
-      primary: {
-        DEFAULT: '#141515',
-        light: '#1E1F1F',
-        lighter: '#282929',
-        lightest: '#323434'
-      },
-
-      secondary: '#EAEBEB',
-      tertiary: '#B1FBD7'
+      surface: '#121212',
+      primary: '#B1FBD7',
+      black: '#000000',
+      white: '#FFFFFF'
     },
 
     container: {
