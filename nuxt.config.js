@@ -44,6 +44,11 @@ export default {
     {
       src: '~/plugins/vue-gtag.js',
       mode: 'client'
+    },
+
+    {
+      src: '~/plugins/vue-masonry-css', 
+      ssr: false 
     }
   ],
 
