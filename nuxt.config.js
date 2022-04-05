@@ -58,6 +58,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/strapi'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -74,5 +75,10 @@ export default {
   server: {     
     port: 8000, // default: 3000     
     host: '0.0.0.0', // default: localhost   
-  }
+  },
+
+  strapi: {
+    entities: ['posts', 'categories'],
+    url: 'https://enigmatic-caverns-63604.herokuapp.com/'
+  },
 }
