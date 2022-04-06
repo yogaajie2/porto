@@ -30,7 +30,7 @@
         <div
           v-for="post in posts"
           :key="post.id"
-          class="dp-1 rounded-b-xl mb-4 bg-white md:mb-6"
+          class="mb-4 rounded-b-xl z-1 bg-dp-1 md:mb-6"
         >
           <img
             :src="post.image.url"
