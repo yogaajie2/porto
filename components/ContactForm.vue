@@ -27,7 +27,7 @@
             type="text"
             name="sender_name"
             placeholder="What's your name?"
-            class="border-b h-full px-4 w-full bg-primary"
+            class="border-b h-full px-4 w-full bg-dp-0"
             @change="isInputNameErrorShown = false"
           >
         </div>
@@ -56,7 +56,7 @@
             type="email"
             name="sender_email"
             placeholder="What's your email?"
-            class="border-b h-full px-4 w-full bg-primary"
+            class="border-b h-full px-4 w-full bg-dp-0"
             @change="isInputEmailErrorShown = false"
           >
         </div>
@@ -85,7 +85,7 @@
             rows="5"
             name="message"
             placeholder="Tell me more about the project"
-            class="border-b h-full px-4 w-full bg-primary"
+            class="border-b h-full px-4 w-full bg-dp-0"
             @change="isTextAreaErrorShown = false"
           />
         </div>
@@ -103,7 +103,7 @@
         class="cta group flex md:mx-auto"
       >
         <span class="logo-on-hover hidden lg:block">//</span>
-        <span class="shift-right-8 border-b border-tertiary translate-x-0">Send Message</span>
+        <span class="shift-right-8 border-b border-primary translate-x-0">Send Message</span>
       </button>
 
       <div

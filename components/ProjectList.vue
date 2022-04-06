@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary container py-12 text-secondary">
+  <section class="bg-dp-0 container py-12 text-secondary">
     <SectionTitle 
       section-title="Work Portfolio"
       section-subtitle="Featured Projects"
@@ -27,12 +27,12 @@
         <NuxtLink
           v-if="isViewAllProjectsShown"
           to="/projects"
-          class="group items-center inline-flex text-tertiary font-heading font-bold uppercase lg:text-xl"
+          class="group items-center inline-flex text-primary font-heading font-bold uppercase lg:text-xl"
           data-cy="view-all-projects"
           @click.native="$nuxt.$emit('showTransition')"
         >
           <span class="logo-on-hover hidden lg:block">//</span>
-          <p class="shift-right-8 border-b border-tertiary translate-x-0">
+          <p class="shift-right-8 border-b border-primary translate-x-0">
             View all projects
           </p>
         </NuxtLink>

@@ -47,15 +47,15 @@
               I primarily use <a
                 href="https://vuejs.org/"
                 target="_blank"
-                class="underline transition-colors duration-200 hover:text-tertiary"
+                class="underline transition-colors duration-200 hover:text-primary"
               >Vue.js</a> together with <a
                 href="https://nuxtjs.org/"
                 target="_blank"
-                class="underline transition-colors duration-200 hover:text-tertiary"
+                class="underline transition-colors duration-200 hover:text-primary"
               >Nuxt.js</a> as the go-to framework. I also prefer using <a
                 href="https://tailwindcss.com/"
                 target="_blank"
-                class="underline transition-colors duration-200 hover:text-tertiary"
+                class="underline transition-colors duration-200 hover:text-primary"
               >Tailwind CSS</a> to help maintain my design systems.
             </p>
           </FadeIn>

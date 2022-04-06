@@ -7,7 +7,7 @@
   >
     <header
       v-show="isHeaderShown"
-      class="bg-primary-lighter fixed text-tertiary top-0 w-screen z-10 transition-transform duration-300 ease-in-out transform"
+      class="fixed top-0 w-screen z-4 bg-dp-4 text-primary transition-transform duration-300 ease-in-out transform"
       :class="{ '-translate-y-full': isScrolledDown }"
     >
       <div class="flex h-20 items-center justify-between container py-4">
@@ -72,7 +72,7 @@
       </div>
 
       <div
-        class="bg-primary-lighter duration-300 ease-in-out fixed flex h-screen items-center justify-center -mt-20 text-2xl text-center text-secondary transform transition-transform w-full -z-10 lg:hidden"
+        class="fixed flex h-screen items-center justify-center w-full -z-10 text-2xl text-center bg-dp-4 transition-transform duration-300 ease-in-out transform  lg:hidden"
         :class="{ 'translate-x-full': isMenuHidden }"
       >
         <Menu />

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary">
+  <section class="bg-dp-0">
     <div class="container py-12 md:py-16 lg:py-20 xl:py-24">
       <SectionTitle 
         section-title="Key Values"

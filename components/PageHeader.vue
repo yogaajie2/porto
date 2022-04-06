@@ -4,7 +4,7 @@
       <div
         v-if="isContentShown"
         key="content"
-        class="h-screen pt-40 bg-primary-light md:pt-60"
+        class="h-screen pt-40 bg-primary-dark z-0 md:pt-60"
         data-cy="page-header"
       >
         <div class="container h-screen space-y-8">
@@ -35,7 +35,7 @@
       
       <Placeholder
         v-else
-        class="h-screen pt-40 bg-primary-light md:pt-60"  
+        class="h-screen pt-40 bg-primary-dark md:pt-60"  
       />
     </ZoomIn>
   </section>
