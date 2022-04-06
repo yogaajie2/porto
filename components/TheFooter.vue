@@ -2,6 +2,7 @@
   <footer>    
     <section
       class="bg-dp-0 md:px-16 lg:px-24 xl:px-32"
+      :class="{ 'bg-primary-dark': $nuxt.$route.path == '/contact' }"
     >
       <div class="container flex flex-col justify-center py-4 space-y-4">
         <nav class="flex justify-center text-xl">
