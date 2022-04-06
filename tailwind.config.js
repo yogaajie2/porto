@@ -60,10 +60,11 @@ module.exports = {
     },
 
     colors: {
-      surface: '#121212',
-      primary: '#B1FBD7',
-      black: '#000000',
-      white: '#FFFFFF'
+      'surface': '#121212',
+      'primary': '#B1FBD7',
+      'primary-dark': '#1a1e1c',
+      'black': '#000000',
+      'white': '#FFFFFF'
     },
 
     container: {
