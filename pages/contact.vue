@@ -39,7 +39,7 @@
               class="cta group flex md:mx-auto"
             >
               <span class="logo-on-hover hidden lg:block">//</span>
-              <span class="shift-right-8 border-b border-tertiary translate-x-0">View Resume</span>
+              <span class="shift-right-8 border-b border-primary translate-x-0">View Resume</span>
             </button>
           </SlideRight>
         </a>
@@ -59,7 +59,7 @@
         class="fixed w-screen bottom-12"
       >
         <div class="container">
-          <div class="rounded h-1/2 p-4 w-full text-center bg-primary-lightest shadow-xl lg:mx-auto lg:w-3/4">
+          <div class="rounded h-1/2 p-4 w-full z-6 text-center bg-dp-6 lg:mx-auto lg:w-3/4">
             <p class="mb-4 font-bold">
               {{ toastMessageStatus }}
             </p>

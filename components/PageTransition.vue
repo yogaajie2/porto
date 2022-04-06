@@ -2,7 +2,7 @@
   <div>
     <div
       v-show="isStillRevealing"
-      class="fixed flex h-screen top-0 w-screen z-20"
+      class="fixed flex h-screen top-0 w-screen z-16"
     >
       <transition
         name="reveal-left"
@@ -12,23 +12,23 @@
       >
         <div
           v-show="isRevealed"
-          class="curtain-left bg-primary-lightest w-full"
+          class="curtain-left w-full bg-dp-16"
         />
       </transition>
 
       <transition name="reveal-right">
         <div
           v-show="isRevealed"
-          class="curtain-right bg-primary-lightest w-full"
+          class="curtain-right w-full bg-dp-16"
         />
       </transition>
     </div>
 
     <div
       v-show="isFirstLoad"
-      class="fixed flex h-screen items-center justify-center top-0 w-screen z-20"
+      class="fixed flex h-screen items-center justify-center top-0 w-screen z-16"
     >
-      <span class="animate-fade-in-out font-heading text-5xl text-tertiary md:text-6xl xl:text-7xl">//</span>
+      <span class="animate-fade-in-out font-heading text-5xl text-primary md:text-6xl xl:text-7xl">//</span>
     </div>
   </div>
 </template>

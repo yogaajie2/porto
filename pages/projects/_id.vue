@@ -12,7 +12,7 @@
             class="h-screen w-screen filter blur lg:mx-auto lg:w-auto"
           >
   
-          <div class="absolute bottom-0 w-full bg-primary bg-opacity-40">
+          <div class="absolute -bottom-2 w-full bg-primary-dark bg-opacity-16">
             <div class="container h-60 py-16 space-y-4 text-secondary md:h-64 lg:h-80">
               <SlideUp @after-enter="isSubtitleShown = true">
                 <h1 v-show="isTitleShown">
@@ -66,7 +66,7 @@
                 v-else
                 :href="value"
                 target="blank"
-                class="underline transition-colors duration-200 hover:text-tertiary"
+                class="underline transition-colors duration-200 hover:text-primary"
               >{{ value }}</a>
             </div>
           </FadeIn>
@@ -74,7 +74,7 @@
       </IntersectionObserverTarget>
     </section>
 
-    <section class="py-8 bg-primary-light xl:py-12">
+    <section class="py-8 bg-primary-dark xl:py-12">
       <div class="container">
         <h2 class="mb-8 font-heading text-center xl:mb-12">
           Gallery
@@ -96,7 +96,7 @@
 
       <NuxtLink
         :to="nextProject.id"
-        class="group flex items-center mb-16 font-heading text-tertiary"
+        class="group flex items-center mb-16 font-heading text-primary"
         @click.native="$nuxt.$emit('showTransition')"
       >
         <span class="logo-on-hover hidden lg:block lg:text-3xl xl:text-4xl">//</span>
@@ -116,7 +116,7 @@
             class="block"
             @click.native="$nuxt.$emit('showTransition')"
           >
-            <p class="font-heading font-bold text-xl underline transition-colors duration-200 hover:text-tertiary">
+            <p class="font-heading font-bold text-xl underline transition-colors duration-200 hover:text-primary">
               Back to all projects
             </p>
           </NuxtLink>

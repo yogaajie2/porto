@@ -27,7 +27,7 @@
         
         <h4>{{ project.overview.role }}</h4>
 
-        <div class="font-heading text-tertiary lg:mb-4">
+        <div class="font-heading text-primary lg:mb-4">
           <span class="logo-on-hover hidden text-2xl lg:block lg:font-normal lg:text-3xl xl:text-4xl">//</span>
           <h2 class="shift-right-12 font-bold translate-x-0 lg:font-normal">
             {{ project.title }}

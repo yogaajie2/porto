@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-primary-light">
+  <main class="bg-dp-0">
     <div class="container">
       <section class="flex items-center justify-between py-8">
         <h1 class="text-primary lg:text-9xl">

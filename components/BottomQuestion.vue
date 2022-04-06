@@ -1,5 +1,5 @@
 <template>
-  <section class="text-secondary bg-primary-lighter">
+  <section class="text-secondary bg-primary-dark">
     <IntersectionObserverTarget
       :threshold="0.5"
       class="container py-12 lg:py-16 xl:py-24"

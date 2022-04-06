@@ -60,7 +60,7 @@
   }
 
   body {
-    @apply bg-primary font-body text-secondary;
+    @apply bg-dp-0 font-body text-white;
   }
 
   h1 {
@@ -90,7 +90,7 @@
 
 @layer components {
   .cta {
-    @apply font-heading font-bold uppercase text-tertiary lg:text-lg;
+    @apply font-heading font-bold uppercase text-primary lg:text-lg;
   }
 
   .logo-on-hover {
