@@ -12,10 +12,6 @@ module.exports = {
 
   theme: {
     extend: {
-      zIndex: {
-        '-10': '-10'
-      },
-
       spacing: {
         '22': '5.5rem',
         '38': '9.5rem',
@@ -106,6 +102,19 @@ module.exports = {
     fontFamily: {
       'heading': ['Raleway', 'sans-serif'],
       'body': ['Montserrat', 'sans-serif']
+    },
+
+    zIndex: {
+      '0': '0',
+      '1': '1',
+      '2': '2',
+      '3': '3',
+      '4': '4',
+      '6': '6',
+      '8': '8',
+      '12': '12',
+      '16': '16',
+      '24': '24'
     }
   },
 
