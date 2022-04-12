@@ -3,7 +3,7 @@
     <div class="container">
       <section class="flex items-center justify-between py-8">
         <h1 class="text-primary lg:text-9xl">
-          /draftioo/
+          /draft/
         </h1>
     
         <p class="hidden w-1/3 lg:block">
