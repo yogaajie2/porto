@@ -96,19 +96,25 @@ export default {
       isListShown : false,
 
       languages: [
-        'HTML5 / CSS3',
+        'HTML5',
+        'CSS3',
         'JavaScript ES6',
-        'PHP',
+        'TypeScript',
         'Git',
+        'PHP',
         'Wordpress'
       ],
 
       frameworks: [
+        'React.js',
         'Vue.js',
+        'Next.js',
         'Nuxt.js',
-        'Laravel',
+        'SASS',
         'Tailwind CSS',
-        'Bootstrap'
+        'Ant Design',
+        'Bootstrap',
+        'Laravel'
       ],
 
       designs: [
