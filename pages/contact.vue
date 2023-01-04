@@ -29,7 +29,7 @@
         @on-intersecting="handleIntersectingViewResume"
       >
         <a
-          href="https://drive.google.com/file/d/1-EPmr6BzppChbAd5sWvxVvJS6tR8ZymV/view?usp=sharing"
+          href="https://drive.google.com/file/d/17FxvuFPRJ28ybmrXuwkXMqyFU-jsvIQ5/view?usp=share_link"
           target="_blank"
           class="h-7"
         >
