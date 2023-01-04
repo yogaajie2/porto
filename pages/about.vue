@@ -32,7 +32,7 @@
         >
           <FadeIn @after-enter="isSecondParagraphShown = true">
             <p v-if="isFirstParagraphShown">
-              I am a front-end developer based in the Greater Jakarta Area, Indonesia where I have been working for more than 2 years.
+              I am a front-end developer based in the Greater Jakarta Area, Indonesia where I have been working for more than 3 years.
             </p>
           </FadeIn>
           
@@ -45,10 +45,18 @@
           <FadeIn @after-enter="isFourthParagraphShown = true">
             <p v-if="isThirdParagraphShown">
               I primarily use <a
+                href="https://reactjs.org/"
+                target="_blank"
+                class="underline transition-colors duration-200 hover:text-primary"
+              >React.js</a> or <a
                 href="https://vuejs.org/"
                 target="_blank"
                 class="underline transition-colors duration-200 hover:text-primary"
-              >Vue.js</a> together with <a
+              >Vue.js</a>, together with <a
+                href="https://nextjs.org/"
+                target="_blank"
+                class="underline transition-colors duration-200 hover:text-primary"
+              >Next.js</a> or <a
                 href="https://nuxtjs.org/"
                 target="_blank"
                 class="underline transition-colors duration-200 hover:text-primary"

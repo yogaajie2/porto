@@ -1,6 +1,36 @@
 {
   "projects": [
     { 
+      "id": "hoteely",
+
+      "thumbnails": {
+        "desktop": "https://i.imgur.com/uaLa2kN.png",
+        "mobile": "https://i.imgur.com/jBEse8y.png"
+      },
+
+      "title": "Hoteely",
+      "subtitle": "Hotel/property management SaaS",
+
+      "overview": {
+        "goal": "Build a property management SaaS, complete with its own booking engine.",
+        "year": "2022",
+        "role": "Front end development",
+        "status": "Under development"
+      },
+
+      "screenshots": [
+        "https://i.imgur.com/a8MvqyL.png",
+        "https://i.imgur.com/rzYzTp0.png",
+        "https://i.imgur.com/jBEse8y.png",
+        "https://i.imgur.com/4DLIFMc.png",
+        "https://i.imgur.com/vetxRXB.png",
+        "https://i.imgur.com/uaLa2kN.png",
+        "https://i.imgur.com/tWj5w8e.png",
+        "https://i.imgur.com/EkGvMOK.png"
+      ]
+    },
+
+    { 
       "id": "flygoal",
 
       "thumbnails": {
