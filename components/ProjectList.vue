@@ -67,7 +67,7 @@ export default {
       if (this.$route.path == '/projects') {
         return this.projects;
       } else {
-        return this.projects.slice(0, 3);
+        return this.projects.slice(0, 4);
       }
     },
 
