@@ -1,6 +1,42 @@
 {
   "projects": [
     { 
+      "id": "felini",
+
+      "thumbnails": {
+        "desktop": "https://i.imgur.com/U3NHLg7.png",
+        "mobile": "https://i.imgur.com/nWd6X89.png"
+      },
+
+      "title": "Felini Furniture",
+      "subtitle": "Furniture product showcase & company profile",
+
+      "overview": {
+        "goal": "Build & design a product showcase and company profile website, complete with its own content management system",
+        "year": "2023",
+        "role": "UI/UX design, front-end development, back-end development",
+        "address": "https://www.felinifurniture.com"
+      },
+
+      "screenshots": [
+        "https://i.imgur.com/eUMJwdD.png",
+        "https://i.imgur.com/lVOKO8J.png",
+        "https://i.imgur.com/RnYnTLd.png",
+        "https://i.imgur.com/GrbgHP3.png",
+        "https://i.imgur.com/nWd6X89.png",
+        "https://i.imgur.com/RS3zJ8V.png",
+        "https://i.imgur.com/nqZ8zPK.png",
+        "https://i.imgur.com/U3NHLg7.png",
+        "https://i.imgur.com/GwN3Fx8.png",
+        "https://i.imgur.com/Vb9F8kn.png",
+        "https://i.imgur.com/cN8l3J7.png",
+        "https://i.imgur.com/6Hjxf9g.png",
+        "https://i.imgur.com/E9pR4Vs.png",
+        "https://i.imgur.com/8U291Aw.png"
+      ]
+    },
+    
+    { 
       "id": "hoteely",
 
       "thumbnails": {

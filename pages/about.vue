@@ -32,7 +32,7 @@
         >
           <FadeIn @after-enter="isSecondParagraphShown = true">
             <p v-if="isFirstParagraphShown">
-              I am a front-end developer based in the Greater Jakarta Area, Indonesia where I have been working for more than 3 years.
+              I am a front-end developer based in the Greater Jakarta Area, Indonesia with more than 4 years of professional experience.
             </p>
           </FadeIn>
           
