@@ -25,7 +25,7 @@
           >
         </div>
         
-        <h4>{{ project.overview.role }}</h4>
+        <h4 class="lg:w-3/4">{{ project.overview.role }}</h4>
 
         <div class="font-heading text-primary lg:mb-4">
           <span class="logo-on-hover hidden text-2xl lg:block lg:font-normal lg:text-3xl xl:text-4xl">//</span>
